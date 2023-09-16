@@ -1,0 +1,57 @@
+/* Ajoutez une animation de flottement */
+@keyframes floating {
+	0%,100% {
+		transform: translateY(-10px);
+	}
+	50% {
+		transform: translateY(10px);
+	}
+}
+/* Positionnement de la vidéo en arrière-plan */
+/* Media queries pour la mise en page responsive */
+/* Styles pour mobile */
+.banner {
+	background-image: url("./assets/images_koukaki/banner.png");
+	min-height: 806px;
+	background-size: cover;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	position: relative;
+	overflow: hidden;
+	width: 100%;
+	img {
+		margin-top: -10%;
+		width: 100%;
+		z-index: 1;
+		opacity: 1;
+		transform: translateY(0px);
+		animation: floating 3s infinite alternate;
+		transition: opacity 1s ease, transform 1s ease;
+		position: relative;
+		height: auto;
+	}
+}
+#background-video {
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+	object-fit: cover;
+	z-index: -1;
+	width: 100%;
+}
+//@media screen and (max-width: 1400px) {
+	.banner {
+		min-height: 600px;
+	}
+//}
+//@media screen and (max-width: 780px) {
+	//.banner {
+	//	min-height: 400px;
+	//}
+	//#background-video {
+	//	display: none;
+	////}
+//}

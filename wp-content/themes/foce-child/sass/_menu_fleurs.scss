@@ -1,0 +1,45 @@
+//animation fleurs menu/////
+
+.orchiMenu,
+.sunFlower,
+.randomMenu,
+.flowerMenu ,
+.hibisMenu
+    {
+    
+   
+        position: absolute;
+        display: block;
+        transform-origin: center center;
+        animation: spin 5s linear infinite; /*durée de l'animation */
+        
+        }
+        @keyframes spin {
+         from{transform:rotate(0);
+         }
+        
+        to{
+              transform: rotate(360deg);
+          }}
+
+
+
+
+        
+          @keyframes floatingRight {
+            0% {
+              transform: translateX(0);
+            }
+            100% {
+              transform: translateX(20px); /* Ajustez la valeur selon vos besoins */
+            }
+          }
+          
+          .catJauneMenu,
+          .catMenu {
+            animation: floating 3s infinite alternate; /* Gardez l'animation existante */
+          }
+          
+          .catGrisMenu {
+            animation: floatingRight 3s infinite alternate;
+        }

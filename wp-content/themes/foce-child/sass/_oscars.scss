@@ -1,0 +1,105 @@
+.nomination {
+    position: relative;
+    display: flex;
+    margin-top: 10%;
+    margin-left: 10%;
+    margin-right: 10%;
+    align-items: center;
+
+    &::before {
+        content: url('./assets/images_koukaki/Sunflower.png');
+        position: absolute;
+       display:block;
+        left: -130px;
+        top: -80px;
+        max-width: 100%; 
+        height: auto; 
+    }
+
+    &::after {
+        content: url('./assets/images_koukaki/orchid.png');
+        position: absolute;
+        display:block;
+        right: -212px;
+        top: -125px;
+        z-index:-1 !important;
+        height: auto;
+
+    }
+
+    .imageNomination {
+        mix-blend-mode: darken;
+        margin-top: -30px;
+        
+    }
+
+    .titreOscar {
+        font-size: 40px;
+        font-weight: 700;
+        color: white;
+        text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+        padding: 1.8em 2em;
+        line-height: 45px;
+        background-repeat: no-repeat;
+        background-size: contain;
+        background-position: center;
+        background-image: url('./assets/images_koukaki/orange.png');
+
+        h2 {
+            text-align: left;
+        }
+    }
+
+     /* Media queries pour la mise en page responsive */
+     @media (max-width: 820px) {
+       
+
+        //&::before,
+        &::after {
+            //display: none; /* Cacher les images pour les écrans plus petits */
+            right: 37px;
+            top:98%;
+        }
+
+        .titreOscar {
+            margin-bottom: 20px; /* Espacement entre le titre et l'image suivante */
+            font-size: 15px;
+            line-height: 25px;
+            padding: 1em 1.5em;
+            margin-left: 15px; 
+        }
+
+        .imageNomination {
+            margin-left: 0; /* Réinitialiser la marge */
+        }
+        .nomination{
+            margin: 89px!important;
+        }
+        .nomination .imageNomination {
+            margin-top: 55px;
+        }
+        .nomination .titreOscar{
+            background-size: cover!important;
+            padding:0;
+            font: size 25px;
+        }
+
+    }
+
+    /* Media query pour les tablettes */
+    @media (max-width: 1024px) {
+        &::after {
+            right: 10px; /* Ajuster la position de ::after pour qu'il soit lisible sur tablette */
+        
+        }
+        &::before{
+            display: none!important;
+        }
+        h2{
+            padding: 0;
+        }
+        .nomination{
+            margin: 89px;;
+        }
+    }
+}

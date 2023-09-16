@@ -1,0 +1,670 @@
+@charset "UTF-8";
+/*
+ Theme Name:  Fleurs d'orangers et chats errants - Oscars Short
+ Theme URI: https://www.koukaki.local/
+ Author: Studio Koukaki
+ Author URI: https://www.koukaki.local/
+ Template: foce
+ Description: Thème enfant à l'occasion de la nomination aux Oscars Shorts
+ Version: 0.1
+ */
+.story__article:after,
+.story :after,
+.site-footer:after,
+.site-footer ul:after,
+.site-footer:before,
+.nomination:after,
+.nomination:before,
+#studio h2:before,
+#studio h2:after {
+  position: absolute;
+  display: block;
+  transform-origin: center center;
+  animation: spin 5s linear infinite; /*durée de l'animation */
+}
+
+@keyframes spin {
+  from {
+    transform: rotate(0);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+.site-footer:after {
+  height: 173px;
+}
+
+.story__article:after {
+  height: 187.99px !important;
+}
+
+.story :after {
+  height: 155px;
+}
+
+.site-footer:after {
+  height: 173px;
+  display: none !important;
+}
+
+.site-footer ul:after {
+  height: 626px;
+}
+
+.site-footer:before {
+  height: 155px;
+  display: none !important;
+}
+
+#studio h2:before {
+  height: 203px !important;
+}
+
+#studio h2:after {
+  height: 109px;
+}
+
+@media (max-width: 768px) {
+  .site-footer:after {
+    height: auto;
+  }
+  .story__article:after {
+    height: auto !important;
+  }
+  .story:after {
+    height: auto;
+  }
+  .site-footer:after,
+  .site-footer ul:after,
+  .site-footer:before,
+  #studio h2:before,
+  #studio h2:after {
+    height: auto !important;
+    display: none !important;
+  }
+}
+.nomination {
+  position: relative;
+  display: flex;
+  margin-top: 10%;
+  margin-left: 10%;
+  margin-right: 10%;
+  align-items: center;
+  /* Media queries pour la mise en page responsive */
+  /* Media query pour les tablettes */
+}
+.nomination::before {
+  content: url("./assets/images_koukaki/Sunflower.png");
+  position: absolute;
+  display: block;
+  left: -130px;
+  top: -80px;
+  max-width: 100%;
+  height: auto;
+}
+.nomination::after {
+  content: url("./assets/images_koukaki/orchid.png");
+  position: absolute;
+  display: block;
+  right: -212px;
+  top: -125px;
+  z-index: -1 !important;
+  height: auto;
+}
+.nomination .imageNomination {
+  mix-blend-mode: darken;
+  margin-top: -30px;
+}
+.nomination .titreOscar {
+  font-size: 40px;
+  font-weight: 700;
+  color: white;
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+  padding: 1.8em 2em;
+  line-height: 45px;
+  background-repeat: no-repeat;
+  background-size: contain;
+  background-position: center;
+  background-image: url("./assets/images_koukaki/orange.png");
+}
+.nomination .titreOscar h2 {
+  text-align: left;
+}
+@media (max-width: 820px) {
+  .nomination::after {
+    right: 37px;
+    top: 98%;
+  }
+  .nomination .titreOscar {
+    margin-bottom: 20px; /* Espacement entre le titre et l'image suivante */
+    font-size: 15px;
+    line-height: 25px;
+    padding: 1em 1.5em;
+    margin-left: 15px;
+  }
+  .nomination .imageNomination {
+    margin-left: 0; /* Réinitialiser la marge */
+  }
+  .nomination .nomination {
+    margin: 89px !important;
+  }
+  .nomination .nomination .imageNomination {
+    margin-top: 55px;
+  }
+  .nomination .nomination .titreOscar {
+    background-size: cover !important;
+    padding: 0;
+    font: size 25px;
+  }
+}
+@media (max-width: 1024px) {
+  .nomination::after {
+    right: 10px; /* Ajuster la position de ::after pour qu'il soit lisible sur tablette */
+  }
+  .nomination::before {
+    display: none !important;
+  }
+  .nomination h2 {
+    padding: 0;
+  }
+  .nomination .nomination {
+    margin: 89px;
+  }
+}
+
+.banner,
+.studio,
+.site-footer,
+.story {
+  opacity: 0;
+  transform: translateY(0);
+}
+
+.banner {
+  animation: fadeSlideDown 3s ease-in-out forwards, fadeIn 3s ease-in-out forwards;
+  animation-delay: 0.5s; /* Ajout d'un délai pour que l'animation de la bannière soit plus visible */
+}
+
+.studio,
+.site-footer,
+.story,
+.banner img {
+  animation: fadeSlideup 3s ease-in-out forwards, fadeIn 3s ease-in-out forwards;
+  animation-delay: 0.5s; /* Ajout d'un délai pour que l'animation des autres sections soit plus visible */
+}
+
+@keyframes fadeSlideDown {
+  from {
+    transform: translateY(-50%);
+    opacity: 0;
+  }
+  to {
+    transform: translateY(0);
+    opacity: 1;
+  }
+}
+@keyframes fadeSlideup {
+  from {
+    transform: translateY(80px);
+    opacity: 0;
+  }
+  to {
+    transform: translateY(0);
+    opacity: 1;
+  }
+}
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+@media screen and (max-width: 1400px) {
+  .banner,
+  .studio,
+  .site-footer,
+  .story {
+    animation-duration: 2s;
+    animation-delay: 0.3s;
+  }
+}
+@media screen and (max-width: 780px) {
+  .banner,
+  .studio,
+  .site-footer,
+  .story {
+    animation-duration: 1.5s;
+    animation-delay: 0.2s;
+  }
+}
+/* CSS pour l'animation de fade-in */
+.fadeIn {
+  opacity: 0; /* L'élément est initialement invisible */
+  transition: opacity 0.5s ease-in; /* Ajoute une transition pour l'opacité */
+}
+
+/* Lorsque la classe 'visibility' est ajoutée, l'élément devient visible */
+.fadeIn.visibility {
+  opacity: 1;
+}
+
+.titleAnimation {
+  display: inline-block;
+  margin-right: 15px;
+  opacity: 0;
+  transform: translateY(100%);
+  transition: opacity 0.2s ease-in, transform 0.5s ease-in;
+}
+.titleAnimation.visibility {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+/* Ajoutez une animation de flottement */
+@keyframes floating {
+  0%, 100% {
+    transform: translateY(-10px);
+  }
+  50% {
+    transform: translateY(10px);
+  }
+}
+/* Positionnement de la vidéo en arrière-plan */
+/* Media queries pour la mise en page responsive */
+/* Styles pour mobile */
+.banner {
+  background-image: url("./assets/images_koukaki/banner.png");
+  min-height: 806px;
+  background-size: cover;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+  overflow: hidden;
+  width: 100%;
+}
+.banner img {
+  margin-top: -10%;
+  width: 100%;
+  z-index: 1;
+  opacity: 1;
+  transform: translateY(0px);
+  animation: floating 3s infinite alternate;
+  transition: opacity 1s ease, transform 1s ease;
+  position: relative;
+  height: auto;
+}
+
+#background-video {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
+  z-index: -1;
+  width: 100%;
+}
+
+.banner {
+  min-height: 600px;
+}
+
+.story #characters {
+  margin: 0;
+}
+
+div .main-characters {
+  width: 100%;
+}
+
+/* Réglez la largeur de l'article à 100% */
+article {
+  max-width: 1440px; /* Utilisation de max-width pour limiter la largeur sur les écrans larges */
+  width: 100%;
+  margin: 0 auto; /* Centrez l'article horizontalement */
+}
+
+h3 {
+  text-align: left;
+  background-position: left;
+  padding: 50px 30px;
+  margin: 0;
+}
+
+/* Ajustez la largeur du conteneur .swiper pour qu'il soit 100% de la largeur de l'écran */
+.swiper {
+  width: 1440px;
+  padding-top: 50px;
+  padding-bottom: 50px;
+  margin: auto;
+}
+
+/* Ajustez la largeur des diapositives .swiper-slide pour qu'elles s'adaptent aux différents écrans */
+.swiper-slide {
+  background-position: center;
+  background-size: cover;
+  margin-left: 10px;
+}
+
+.swiper-wrapper {
+  overflow: hidden;
+}
+@media screen and (max-width: 780px) {
+  .swiper-wrapper {
+    /* Ajustements pour les écrans jusqu'à 780px de largeur */
+  }
+  .swiper-wrapper h3 {
+    padding: 20px 10px;
+    width: calc(50% - 10px);
+    margin-right: 5px;
+    margin-left: 5px;
+    height: 65px;
+  }
+}
+
+.story #place {
+  display: flex;
+  background-image: url("./assets/images_koukaki/Studio_Koukaki-image_place.png");
+  width: 100%;
+  min-height: 699px;
+  background-size: cover;
+}
+
+.story #place .cloud {
+  position: absolute;
+  width: 954px;
+  height: 338px;
+  top: 1450px;
+  left: 693px;
+  filter: blur(10px);
+}
+
+#littlecloud {
+  margin-top: 50px;
+  transition: transform 0.2s ease; /* Ajoutez une transition pour le mouvement en douceur */
+}
+
+#bigcloud {
+  margin-left: 260px;
+  transition: transform 0.2s ease; /* Ajoutez une transition pour le mouvement en douceur */
+}
+
+/* Media queries pour la mise en page responsive */
+@media screen and (max-width: 1400px) {
+  .story #place {
+    min-height: 500px;
+  }
+  .story #place .cloud {
+    width: 80%;
+    max-width: 954px;
+    height: auto;
+    top: auto;
+    left: auto;
+    right: 0;
+    filter: none;
+  }
+  #littlecloud, #bigcloud {
+    margin: 0 auto;
+  }
+}
+@media screen and (max-width: 780px) {
+  .story #place {
+    min-height: 300px;
+  }
+  .h2 {
+    font-size: 2rem;
+  }
+  .story #place .cloud {
+    width: 100%;
+    height: auto;
+    top: auto;
+    left: auto;
+    right: 0;
+  }
+  #littlecloud, #bigcloud {
+    margin: 0 auto;
+    display: none;
+  }
+}
+.toggle_btn {
+  width: 42px;
+  height: 24px;
+  cursor: pointer;
+  position: relative;
+  float: right;
+  margin-top: 30px;
+  margin-right: 120px;
+}
+.toggle_btn span {
+  width: 100%;
+  height: 4px;
+  background-color: black;
+  display: block;
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  transition: background-color 0.5s ease-in-out;
+}
+.toggle_btn span::before {
+  content: "";
+  position: absolute;
+  width: 100%;
+  height: 4px;
+  background-color: black;
+  transition: transform 0.5s ease-in-out;
+  transform: translateY(-10px);
+}
+.toggle_btn span::after {
+  content: "";
+  position: absolute;
+  width: 100%;
+  height: 4px;
+  background-color: black;
+  transition: transform 0.5s ease-in-out;
+  transform: translateY(10px);
+}
+
+.toggle_btn.active span {
+  background-color: transparent;
+}
+.toggle_btn.active span::before {
+  transform: translateY(0px) rotateZ(45deg);
+}
+.toggle_btn.active span::after {
+  transform: translateY(0px) rotateZ(-45deg);
+}
+
+/* Media queries pour la mise en page responsive */
+@media screen and (min-width: 200px) and (max-width: 640px) {
+  .toggle_btn {
+    right: -78px;
+    position: fixed;
+  }
+}
+.site-title {
+  text-align: center;
+  marker: none;
+  padding-left: 170px !important;
+  position: absolute;
+}
+
+.MenuFull {
+  background-color: #FFF5E9;
+  position: fixed;
+  top: 80px;
+  overflow: hidden;
+  height: 0;
+  transition: height 0.5s ease-in-out;
+  width: 1440px;
+  justify-content: center;
+}
+.MenuFull img {
+  transition: opacity 0.5s ease-in-out, transform 0.5s ease-in-out;
+  margin: auto;
+  display: flex;
+}
+.MenuFull a {
+  position: relative;
+  text-align: center;
+  text-decoration: none;
+  opacity: 1;
+  transform: translateY(-285px);
+  transition: opacity 0.5s ease-in-out, transform 0.5s ease-in-out;
+  height: 30px;
+  font-size: 44px;
+  font-weight: 400;
+  margin-top: 115px;
+}
+.MenuFull a:hover {
+  color: black;
+  text-shadow: -1px -1px 3px rgba(255, 92, 0, 0.5019607843), 3px -1px 3px rgba(255, 92, 0, 0.3), -1px 3px 3px rgba(255, 92, 0, 0.3), 3px 3px 3px rgba(255, 92, 0, 0.3);
+}
+
+.MenuFull.nav_open {
+  height: 100%;
+}
+
+.nav_open .MenuFull a {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+menu .logoMenu {
+  display: block;
+  margin: 0 auto;
+}
+
+.orchiMenu {
+  position: absolute;
+  top: 70px;
+  height: auto;
+  max-width: 100%;
+  left: -60px;
+  z-index: -1;
+}
+
+.catMenu {
+  position: absolute;
+  top: 185px;
+  left: 355px;
+  width: 109px;
+  height: 98px;
+}
+
+.sunFlower {
+  position: absolute;
+  top: 90px;
+  left: 994px;
+  width: 216px;
+  height: 216px;
+  animation: spin 5s linear infinite;
+}
+
+.randomMenu {
+  position: absolute;
+  float: right;
+  top: 356px;
+  left: 1387px;
+  width: 75px;
+  height: 75px;
+  animation: spin 5s linear infinite;
+}
+
+.flowerMenu {
+  position: absolute;
+  top: 508px;
+  left: 212px;
+  width: 70px;
+  height: 70px;
+}
+
+.hibisMenu {
+  position: absolute;
+  top: 687px;
+  left: 1122px;
+  width: 626px;
+  height: 626px;
+}
+
+.catGrisMenu {
+  position: absolute;
+  top: 474px;
+  left: 1047px;
+  width: 135px;
+  height: 128px;
+}
+
+.catJauneMenu {
+  position: absolute;
+  top: 776px;
+  left: 101px;
+  width: 105px;
+  height: 95px;
+}
+
+.StudioKoukaki {
+  position: absolute;
+  top: 932px;
+  left: 643px;
+  width: 160px;
+  height: 12px;
+}
+
+.orchiMenu,
+.sunFlower,
+.randomMenu,
+.flowerMenu,
+.hibisMenu {
+  position: absolute;
+  display: block;
+  transform-origin: center center;
+  animation: spin 5s linear infinite; /*durée de l'animation */
+}
+
+@keyframes spin {
+  from {
+    transform: rotate(0);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+@keyframes floatingRight {
+  0% {
+    transform: translateX(0);
+  }
+  100% {
+    transform: translateX(20px); /* Ajustez la valeur selon vos besoins */
+  }
+}
+.catJauneMenu,
+.catMenu {
+  animation: floating 3s infinite alternate; /* Gardez l'animation existante */
+}
+
+.catGrisMenu {
+  animation: floatingRight 3s infinite alternate;
+}
+
+@media (max-width: 700px) {
+  #studio h2 {
+    font-size: 2rem;
+  }
+}
+.main-navigation ul {
+  height: 50%;
+  justify-content: space-evenly;
+  align-items: center;
+  list-style: none;
+  flex-direction: column;
+  margin-top: 2%;
+}
+
+.main-navigation {
+  position: absolute;
+}/*# sourceMappingURL=style.css.map */
