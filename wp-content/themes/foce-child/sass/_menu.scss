@@ -97,23 +97,19 @@ $background-color_1: #FFF5E9;
 	height: 0;
 	transition: height 0.5s ease-in-out;
 	width: 1440px;
-	justify-content: center;
-	img {
-		transition: opacity 0.5s ease-in-out, transform 0.5s ease-in-out;
-		margin: auto;
-		display: flex;
-	}
+	
+	
 	a {
 		position: relative;
-		text-align: center;
-		text-decoration: none;
+		//text-align: center;
+		//text-decoration: none;
 		opacity: 1;
 		transform: translateY(-285px);
 		transition: opacity 0.5s ease-in-out, transform 0.5s ease-in-out;
-		height: 30px;
+		height: 0px;
 		font-size: 44px;
 		font-weight: 400;
-		margin-top: 115px;
+		margin-top: 97px;
 		&:hover {
 			color: $color_1;
 			text-shadow: -1px -1px 3px #ff5c0080, 3px -1px 3px rgba(255, 92, 0, 0.3), -1px 3px 3px rgba(255, 92, 0, 0.3), 3px 3px 3px rgba(255, 92, 0, 0.3);
@@ -122,7 +118,9 @@ $background-color_1: #FFF5E9;
 }
 .MenuFull.nav_open {
 	height: 100%;
+	padding-top: 30%;
 }
+
 .nav_open {
 	.MenuFull {
 		a {
@@ -131,12 +129,14 @@ $background-color_1: #FFF5E9;
 		}
 	}
 }
-/////////////////////////////////////////Images {
-	menu/////////////////////////////////////////////////////// {
-		.logoMenu {
-			display: block;
-			margin: 0 auto;
-		}
+/////////////////////////////////////////
+		
+.logoMenu {
+    
+    position: absolute;
+    left: 43%;
+    top: 1%;
+}
 	
 .orchiMenu {
 	position: absolute;
@@ -172,35 +172,36 @@ $background-color_1: #FFF5E9;
 }
 .flowerMenu {
 	position: absolute;
-	top: 508px;
+	top: 403px;
 	left: 212px;
 	width: 70px;
 	height: 70px;
 }
 .hibisMenu {
 	position: absolute;
-	top: 687px;
+	top: 597px;
 	left: 1122px;
 	width: 626px;
 	height: 626px;
 }
 .catGrisMenu {
 	position: absolute;
-	top: 474px;
-	left: 1047px;
-	width: 135px;
-	height: 128px;
+	top: 44%;
+	left: 70%;
+	width: 10%;
+	height: 14%;
+	display: block;
 }
 .catJauneMenu {
 	position: absolute;
-	top: 776px;
+	top: 621px;
 	left: 101px;
 	width: 105px;
 	height: 95px;
 }
 .StudioKoukaki {
 	position: absolute;
-	top: 932px;
+	top: 810px;
 	left: 643px;
 	width: 160px;
 	height: 12px;

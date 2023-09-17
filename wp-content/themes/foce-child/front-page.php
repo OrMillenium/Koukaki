@@ -11,7 +11,7 @@ get_header();
               
                 <div class="fade-in">
                 
-                     <img src="<?php echo get_template_directory_uri() . '/assets/images/logo.png'; ?> " alt="logo Fleurs d'oranger & chats errants">
+                     <img id="logo-koukaki" src="<?php echo get_template_directory_uri() . '/assets/images/logo.png'; ?> " alt="logo Fleurs d'oranger & chats errants">
                 </div>
                  <video id="background-video" autoplay loop muted>
                  <source src="<?php echo get_stylesheet_directory_uri() . '/assets/images_koukaki/studio.mp4'; ?>" type="video/mp4">

@@ -7,13 +7,16 @@
     background-size: cover;
    
 }
+.story #place > div p {
+    padding-left: 5em;
+    width: 100%;
+}
 
  .story #place .cloud {
-    position: absolute; 
+    
     width: 954px;
     height: 338px;
-    top: 1450px;
-    left: 693px;
+    left: 823px;
     filter: blur(10px);
    
 }
@@ -30,35 +33,10 @@
         transition: transform 0.2s ease; /* Ajoutez une transition pour le mouvement en douceur */
     }
     
+    
+ 
 
-  /* Media queries pour la mise en page responsive */
-@media screen and (max-width: 1400px) {
-    .story #place {
-        min-height: 500px;
-    }
-
-    .story #place .cloud {
-        width: 80%;
-        max-width: 954px;
-        height: auto;
-        top: auto;
-        left: auto;
-        right: 0;
-        filter: none;
-    }
-
-    #littlecloud, #bigcloud {
-        margin: 0 auto;
-    }
-}
-
-@media screen and (max-width: 780px) {
-    .story #place {
-        min-height: 300px;
-    }
-    .h2 {
-    font-size: 2rem;
-    }
+   
     .story #place .cloud {
         width: 100%;
         height: auto;
@@ -70,6 +48,6 @@
         margin: 0 auto;
         display: none;
     }
-}
+
 
 

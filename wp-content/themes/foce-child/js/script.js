@@ -89,13 +89,13 @@ const swiper = new Swiper(".swiper", {
         
     },
     loop:"true",
-loopedSlides:2,
-loopAdditionalSlides:1,
-    //autoplay:{
-        //delay:1000,
-        //disableOniteraction:false,
+     loopedSlides:2, 
+     loopAdditionalSlides:1,
+        autoplay:{
+        delay:1000,
+        disableOniteraction:false,
         
-    //},
+    },
 
 });
 

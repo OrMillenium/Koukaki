@@ -61,30 +61,9 @@
             top:98%;
         }
 
-        .titreOscar {
-            margin-bottom: 20px; /* Espacement entre le titre et l'image suivante */
-            font-size: 15px;
-            line-height: 25px;
-            padding: 1em 1.5em;
-            margin-left: 15px; 
-        }
+        
 
-        .imageNomination {
-            margin-left: 0; /* Réinitialiser la marge */
-        }
-        .nomination{
-            margin: 89px!important;
-        }
-        .nomination .imageNomination {
-            margin-top: 55px;
-        }
-        .nomination .titreOscar{
-            background-size: cover!important;
-            padding:0;
-            font: size 25px;
-        }
-
-    }
+        
 
     /* Media query pour les tablettes */
     @media (max-width: 1024px) {
@@ -99,7 +78,8 @@
             padding: 0;
         }
         .nomination{
-            margin: 89px;;
+            margin: 89px;
         }
     }
+}
 }

@@ -7,12 +7,9 @@
 		transform: translateY(10px);
 	}
 }
-/* Positionnement de la vidéo en arrière-plan */
-/* Media queries pour la mise en page responsive */
-/* Styles pour mobile */
+
 .banner {
 	background-image: url("./assets/images_koukaki/banner.png");
-	min-height: 806px;
 	background-size: cover;
 	display: flex;
 	justify-content: center;
@@ -42,16 +39,3 @@
 	z-index: -1;
 	width: 100%;
 }
-//@media screen and (max-width: 1400px) {
-	.banner {
-		min-height: 600px;
-	}
-//}
-//@media screen and (max-width: 780px) {
-	//.banner {
-	//	min-height: 400px;
-	//}
-	//#background-video {
-	//	display: none;
-	////}
-//}

@@ -17,16 +17,16 @@ article {
 
 
 
-h3 {
+.main-character h3 {
   text-align: left;
-  background-position: left;
+  background-position:left ;
   padding: 50px 30px;
   margin: 0; 
 }
 
 /* Ajustez la largeur du conteneur .swiper pour qu'il soit 100% de la largeur de l'écran */
 .swiper {
-  width: 1440px;
+  //width: 1440px;
   padding-top: 50px;
   padding-bottom: 50px;
   margin: auto;

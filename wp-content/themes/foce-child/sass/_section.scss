@@ -68,5 +68,9 @@
   .story {
     animation-duration: 1.5s;
     animation-delay: 0.2s;
-  }
+  }}
+@media screen and (max-width: 780px) {
+    .banner{
+      min-height: auto;
+    }
 }
