@@ -2,7 +2,8 @@
 .banner,
 .studio,
 .site-footer,
-.story {
+.story,
+.nomination{
   opacity: 0;
  transform: translateY(0);
 }
@@ -12,10 +13,13 @@
   animation-delay: 0.5s; /* Ajout d'un délai pour que l'animation de la bannière soit plus visible */
 }
 
+
+
 .studio,
 .site-footer, 
 .story, 
-.banner img{
+.banner img,
+.nomination {
   animation: fadeSlideup 3s ease-in-out forwards, fadeIn 3s ease-in-out forwards;
   animation-delay: 0.5s; /* Ajout d'un délai pour que l'animation des autres sections soit plus visible */
 }

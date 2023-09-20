@@ -11,24 +11,29 @@
 .banner {
 	background-image: url("./assets/images_koukaki/banner.png");
 	background-size: cover;
-	//display: flex;
-	//justify-content: center;
-	//align-items: center;
 	position: relative;
 	overflow: hidden;
 	width: 100%;
-	img {
-		margin-top: -10%;
-		width: 100%;
-		z-index: 1;
-		opacity: 1;
-		transform: translateY(0px);
-		animation: floating 3s infinite alternate;
-		transition: opacity 1s ease, transform 1s ease;
-		position: relative;
-		height: auto;
-	}
+	height:806px;
 }
+#logo img{
+	position: relative;
+	top: 30%; /* Ajustez cette valeur selon votre besoin */
+	transform: translateY(-50%);
+	z-index: 1;
+	opacity: 1;
+	animation: floating 3s infinite alternate;
+	transition: opacity 1s ease, transform 1s ease;
+	width: 100%;
+}
+
+
+	#logo.active {
+		transition: transform 0.2s ease;
+	}
+
+
+
 #background-video {
 	position: absolute;
 	top: 0;

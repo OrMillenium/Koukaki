@@ -151,3 +151,34 @@ const toggle_btn = document.querySelector('.toggle_btn');
                     toggle_btn.classList.remove('active');
                 })});
         
+
+/////////////////////////////////////////////logo scroll///////////
+let previousScroll = 0;
+
+function moveLogoOnScroll() {
+    const scrollY = window.scrollY;
+    const logo = document.getElementById('logo');
+    
+    // Réglez la vitesse de déplacement du logo en fonction de vos préférences
+    const logoSpeed = 0.3;
+    
+    // Calculez les nouvelles positions du logo en fonction du défilement
+    const maxDownPosition = -400; // Limite de déplacement en bas
+    const logoY = -scrollY * logoSpeed + 260;
+
+    // Vérifiez la direction du défilement
+    if (scrollY > previousScroll) {
+        // Défilement vers le bas
+        if (scrollY > maxDownPosition) {
+            logo.style.transform = `translateY(${logoY}px)`;
+        }
+    } else {
+        // Défilement vers le haut
+        logo.style.transform = 'translateY(0)';
+    }
+
+    previousScroll = scrollY;
+}
+
+// Ajoutez un écouteur d'événement de défilement pour appeler la fonction de déplacement du logo
+window.addEventListener('scroll', moveLogoOnScroll);
