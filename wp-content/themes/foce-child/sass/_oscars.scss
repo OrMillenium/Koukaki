@@ -5,27 +5,39 @@
     margin-left: 10%;
     margin-right: 10%;
     align-items: center;
-
+    
     &::before {
-        content: url('./assets/images_koukaki/Sunflower.png');
+        content: "";
+        background-image: url('./assets/images_koukaki/Sunflower.png');
+        background-size: cover;
+        background-position: center;
         position: absolute;
-       display:block;
         left: -130px;
         top: -80px;
-        max-width: 100%; 
-        height: auto; 
+        width: 200px; /* Ajustez la largeur selon vos besoins */
+        height: 200px; /* Ajustez la hauteur selon vos besoins */
+    
     }
 
     &::after {
-        content: url('./assets/images_koukaki/orchid.png');
+        content: "";
+        background-image: url('./assets/images_koukaki/orchid.png');
+        background-size: cover;
+        background-position: center;
         position: absolute;
-        display:block;
         right: -212px;
         top: -125px;
-        z-index:-1 !important;
-        height: auto;
+        width: 200px; /* Ajustez la largeur selon vos besoins */
+        height: 200px; /* Ajustez la hauteur selon vos besoins */
+        z-index: -1;
+
+    } }
+
+    #oscars{
+        overflow: hidden; /* Empêche le débordement des éléments enfants */
 
     }
+    
 
     .imageNomination {
         mix-blend-mode: darken;
@@ -50,36 +62,4 @@
         }
     }
 
-     /* Media queries pour la mise en page responsive */
-     @media (max-width: 820px) {
-       
-
-        //&::before,
-        &::after {
-            //display: none; /* Cacher les images pour les écrans plus petits */
-            right: 37px;
-            top:98%;
-        }
-
-        
-
-        
-
-    /* Media query pour les tablettes */
-    @media (max-width: 1024px) {
-        &::after {
-            right: 10px; /* Ajuster la position de ::after pour qu'il soit lisible sur tablette */
-        
-        }
-        &::before{
-            display: none!important;
-        }
-        h2{
-            padding: 0;
-        }
-        .nomination{
-            margin: 89px;
-        }
-    }
-}
-}
+    

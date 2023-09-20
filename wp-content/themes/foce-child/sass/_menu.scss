@@ -52,18 +52,6 @@ $background-color_2: transparent;
 
 
 
-/* Media queries pour la mise en page responsive */
-
-
-
-
-@media screen and (min-width: 200px) and (max-width: 640px) {
-
-    .toggle_btn {
-        right: -78px; 
-        position: fixed;
-    }
-}
 
 
 
@@ -119,6 +107,7 @@ $background-color_1: #FFF5E9;
 .MenuFull.nav_open {
 	height: 100%;
 	padding-top: 30%;
+	width:1440px;
 }
 
 .nav_open {
@@ -206,6 +195,4 @@ $background-color_1: #FFF5E9;
 	width: 160px;
 	height: 12px;
 }
-
-
 

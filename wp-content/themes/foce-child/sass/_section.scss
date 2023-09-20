@@ -51,26 +51,3 @@
   }
 }
 
-@media screen and (max-width: 1400px) {
-  .banner,
-  .studio,
-  .site-footer,
-  .story {
-    animation-duration: 2s;
-    animation-delay: 0.3s;
-  }
-}
-
-@media screen and (max-width: 780px) {
-  .banner,
-  .studio,
-  .site-footer,
-  .story {
-    animation-duration: 1.5s;
-    animation-delay: 0.2s;
-  }}
-@media screen and (max-width: 780px) {
-    .banner{
-      min-height: auto;
-    }
-}

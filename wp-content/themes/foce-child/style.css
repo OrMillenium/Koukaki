@@ -91,31 +91,41 @@
   margin-left: 10%;
   margin-right: 10%;
   align-items: center;
-  /* Media queries pour la mise en page responsive */
 }
 .nomination::before {
-  content: url("./assets/images_koukaki/Sunflower.png");
+  content: "";
+  background-image: url("./assets/images_koukaki/Sunflower.png");
+  background-size: cover;
+  background-position: center;
   position: absolute;
-  display: block;
   left: -130px;
   top: -80px;
-  max-width: 100%;
-  height: auto;
+  width: 200px; /* Ajustez la largeur selon vos besoins */
+  height: 200px; /* Ajustez la hauteur selon vos besoins */
 }
 .nomination::after {
-  content: url("./assets/images_koukaki/orchid.png");
+  content: "";
+  background-image: url("./assets/images_koukaki/orchid.png");
+  background-size: cover;
+  background-position: center;
   position: absolute;
-  display: block;
   right: -212px;
   top: -125px;
-  z-index: -1 !important;
-  height: auto;
+  width: 200px; /* Ajustez la largeur selon vos besoins */
+  height: 200px; /* Ajustez la hauteur selon vos besoins */
+  z-index: -1;
 }
-.nomination .imageNomination {
+
+#oscars {
+  overflow: hidden; /* Empêche le débordement des éléments enfants */
+}
+
+.imageNomination {
   mix-blend-mode: darken;
   margin-top: -30px;
 }
-.nomination .titreOscar {
+
+.titreOscar {
   font-size: 40px;
   font-weight: 700;
   color: white;
@@ -127,31 +137,8 @@
   background-position: center;
   background-image: url("./assets/images_koukaki/orange.png");
 }
-.nomination .titreOscar h2 {
+.titreOscar h2 {
   text-align: left;
-}
-@media (max-width: 820px) {
-  .nomination {
-    /* Media query pour les tablettes */
-  }
-  .nomination::after {
-    right: 37px;
-    top: 98%;
-  }
-}
-@media (max-width: 820px) and (max-width: 1024px) {
-  .nomination::after {
-    right: 10px; /* Ajuster la position de ::after pour qu'il soit lisible sur tablette */
-  }
-  .nomination::before {
-    display: none !important;
-  }
-  .nomination h2 {
-    padding: 0;
-  }
-  .nomination .nomination {
-    margin: 89px;
-  }
 }
 
 .banner,
@@ -203,29 +190,6 @@
     opacity: 1;
   }
 }
-@media screen and (max-width: 1400px) {
-  .banner,
-  .studio,
-  .site-footer,
-  .story {
-    animation-duration: 2s;
-    animation-delay: 0.3s;
-  }
-}
-@media screen and (max-width: 780px) {
-  .banner,
-  .studio,
-  .site-footer,
-  .story {
-    animation-duration: 1.5s;
-    animation-delay: 0.2s;
-  }
-}
-@media screen and (max-width: 780px) {
-  .banner {
-    min-height: auto;
-  }
-}
 /* CSS pour l'animation de fade-in */
 .fadeIn {
   opacity: 0; /* L'élément est initialement invisible */
@@ -261,9 +225,6 @@
 .banner {
   background-image: url("./assets/images_koukaki/banner.png");
   background-size: cover;
-  display: flex;
-  justify-content: center;
-  align-items: center;
   position: relative;
   overflow: hidden;
   width: 100%;
@@ -297,7 +258,7 @@
 }
 
 div .main-characters {
-  width: 100%;
+  width: 1440px;
 }
 
 /* Réglez la largeur de l'article à 100% */
@@ -314,42 +275,37 @@ article {
   margin: 0;
 }
 
-/* Ajustez la largeur du conteneur .swiper pour qu'il soit 100% de la largeur de l'écran */
+.mySwiper {
+  max-width: 1440px;
+  margin: 0 auto; /* Centrez le carrousel horizontalement */
+}
+
 .swiper {
   padding-top: 50px;
   padding-bottom: 50px;
-  margin: auto;
 }
 
-/* Ajustez la largeur des diapositives .swiper-slide pour qu'elles s'adaptent aux différents écrans */
 .swiper-slide {
   background-position: center;
   background-size: cover;
-  margin-left: 10px;
+  width: 1600px;
+  height: 600px;
 }
 
-.swiper-wrapper {
-  overflow: hidden;
-}
-@media screen and (max-width: 780px) {
-  .swiper-wrapper {
-    /* Ajustements pour les écrans jusqu'à 780px de largeur */
-  }
-  .swiper-wrapper h3 {
-    padding: 20px 10px;
-    width: calc(50% - 10px);
-    margin-right: 5px;
-    margin-left: 5px;
-    height: 65px;
-  }
+.swiper-slide img {
+  display: block;
+  max-width: 1440px !important;
+  margin: 50px;
 }
 
 .story #place {
+  position: relative;
   display: flex;
   background-image: url("./assets/images_koukaki/Studio_Koukaki-image_place.png");
   width: 100%;
   min-height: 699px;
   background-size: cover;
+  overflow: hidden; /* Empêche le débordement des éléments enfants */
 }
 
 .story #place > div p {
@@ -357,34 +313,21 @@ article {
   width: 100%;
 }
 
-.story #place .cloud {
-  width: 954px;
-  height: 338px;
-  left: 823px;
-  filter: blur(10px);
-}
-
 #littlecloud {
-  margin-top: 50px;
+  position: absolute;
+  margin-left: 26%;
   transition: transform 0.2s ease; /* Ajoutez une transition pour le mouvement en douceur */
 }
 
 #bigcloud {
-  margin-left: 260px;
+  margin-top: -32%;
+  position: absolute;
   transition: transform 0.2s ease; /* Ajoutez une transition pour le mouvement en douceur */
-}
-
-.story #place .cloud {
-  width: 100%;
-  height: auto;
-  top: auto;
-  left: auto;
-  right: 0;
+  margin-left: 20%;
 }
 
 #littlecloud, #bigcloud {
-  margin: 0 auto;
-  display: none;
+  filter: blur(10px);
 }
 
 .toggle_btn {
@@ -435,13 +378,6 @@ article {
   transform: translateY(0px) rotateZ(-45deg);
 }
 
-/* Media queries pour la mise en page responsive */
-@media screen and (min-width: 200px) and (max-width: 640px) {
-  .toggle_btn {
-    right: -78px;
-    position: fixed;
-  }
-}
 .site-title {
   text-align: center;
   marker: none;
@@ -476,6 +412,7 @@ article {
 .MenuFull.nav_open {
   height: 100%;
   padding-top: 30%;
+  width: 1440px;
 }
 
 .nav_open .MenuFull a {
@@ -602,11 +539,6 @@ article {
   animation: floatingRight 3s infinite alternate;
 }
 
-@media (max-width: 700px) {
-  #studio h2 {
-    font-size: 2rem;
-  }
-}
 .main-navigation ul {
   height: 50%;
   justify-content: space-evenly;
