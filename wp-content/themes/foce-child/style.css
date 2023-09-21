@@ -90,7 +90,7 @@
   margin-top: 10%;
   margin-left: 10%;
   margin-right: 10%;
-  align-items: center;
+  justify-content: center;
 }
 .nomination::before {
   content: "";
@@ -110,37 +110,49 @@
   background-position: center;
   position: absolute;
   right: -212px;
-  top: -125px;
+  top: -86px;
   width: 200px; /* Ajustez la largeur selon vos besoins */
   height: 200px; /* Ajustez la hauteur selon vos besoins */
   z-index: -1;
 }
 
+.imageNomination {
+  display: flex;
+  justify-content: space-between;
+  margin: auto;
+}
+
 #oscars {
+  position: relative;
   overflow: hidden; /* Empêche le débordement des éléments enfants */
 }
 
-.imageNomination {
-  mix-blend-mode: darken;
-  margin-top: -30px;
+.titreOscar h3 img {
+  width: 50%;
+  font-size: 22px;
 }
 
-.titreOscar {
-  font-size: 40px;
-  font-weight: 700;
-  color: white;
-  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
-  padding: 1.8em 2em;
-  line-height: 45px;
-  background-repeat: no-repeat;
-  background-size: contain;
-  background-position: center;
+h3 {
+  font-size: 2rem;
   background-image: url("./assets/images_koukaki/orange.png");
 }
-.titreOscar h2 {
-  text-align: left;
-}
 
+@media screen and (max-width: 1192px) {
+  #nomination, .imageNomination {
+    display: flex;
+    flex-direction: column;
+  }
+  #nomination .titreOscar, #nomination h3, .imageNomination .titreOscar, .imageNomination h3 {
+    font-size: 1rem;
+  }
+}
+@media screen and (max-width: 1192px) {
+  .oscar, img {
+    max-width: 50%;
+    margin-left: 21%;
+    margin-top: 5%;
+  }
+}
 .banner,
 .studio,
 .site-footer,
@@ -230,18 +242,17 @@
   position: relative;
   overflow: hidden;
   width: 100%;
-  height: 806px;
 }
 
 #logo img {
-  position: relative;
+  position: sticky;
   top: 30%; /* Ajustez cette valeur selon votre besoin */
   transform: translateY(-50%);
   z-index: 1;
   opacity: 1;
   animation: floating 3s infinite alternate;
   transition: opacity 1s ease, transform 1s ease;
-  width: 100%;
+  width: 90%;
 }
 
 #logo.active {
@@ -290,19 +301,6 @@ article {
 .swiper {
   padding-top: 50px;
   padding-bottom: 50px;
-}
-
-.swiper-slide {
-  background-position: center;
-  background-size: cover;
-  width: 1600px;
-  height: 600px;
-}
-
-.swiper-slide img {
-  display: block;
-  max-width: 1440px !important;
-  margin: 50px;
 }
 
 .story #place {
@@ -399,12 +397,9 @@ article {
   overflow: hidden;
   height: 0;
   width: 1440px;
-  transition: height 0.5s ease-in-out, padding-top 0.5s ease-in-out;
-  animation: fadeIn 3s ease-in-out forwards;
-  animation-delay: 0.5s;
 }
 
-a {
+.MenuFull a {
   position: relative;
   transform: translateY(-285px);
   height: 0px;
@@ -412,9 +407,12 @@ a {
   font-weight: 400;
   margin-top: 97px;
 }
-a:hover {
+.MenuFull a:hover {
   color: black;
   text-shadow: -1px -1px 3px rgba(255, 92, 0, 0.5019607843), 3px -1px 3px rgba(255, 92, 0, 0.3), -1px 3px 3px rgba(255, 92, 0, 0.3), 3px 3px 3px rgba(255, 92, 0, 0.3);
+  animation: fadeIn 3s ease-in-out forwards;
+  animation-delay: 0.5s;
+  transition: height 0.5s ease-in-out, padding-top 0.5s ease-in-out;
 }
 
 .MenuFull.nav_open {
@@ -559,4 +557,38 @@ a:hover {
   position: relative;
   margin-top: 3em;
   overflow: hidden;
+}
+
+/* Vidéo Sur les écrans, quand la largeur de la fenêtre fait au maximum 1280px */
+@media screen and (max-width: 576px) {
+  #background-video {
+    display: none;
+  }
+}
+/* Nuages Sur les écrans, quand la largeur de la fenêtre fait au maximum 576px */
+@media screen and (max-width: 576px) {
+  #bigcloud,
+  #littlecloud {
+    display: none;
+  }
+}
+/* Nuages Sur les écrans, quand la largeur de la fenêtre fait au maximum 767px */
+@media screen and (max-width: 767px) {
+  #bigcloud {
+    margin-top: -47%;
+    position: fixed;
+  }
+  #littlecloud {
+    position: fixed;
+    margin-left: 47%;
+  }
+}
+@media screen and (max-width: 767px) {
+  .story, #place {
+    display: flex;
+    flex-direction: column;
+  }
+  .story, #place, p {
+    margin-top: 3em;
+  }
 }/*# sourceMappingURL=style.css.map */

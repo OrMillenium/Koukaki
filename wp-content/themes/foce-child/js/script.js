@@ -88,20 +88,14 @@ coverflowEffect: {
 loop:"true",
 loopedSlides:2,
 loopAdditionalSlides:1,
-autoplay:{
-    delay:1000,
-    disableOniteraction:false,
+//autoplay:{
+   // delay:1000,
+   // disableOniteraction:false,
 
-},
+//},
 
 speed: 800,
 });
-
-
-
-
-
-
 
 
 

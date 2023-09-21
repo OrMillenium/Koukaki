@@ -4,7 +4,9 @@
     margin-top: 10%;
     margin-left: 10%;
     margin-right: 10%;
-    align-items: center;
+    justify-content: center;
+    
+    
     
     &::before {
         content: "";
@@ -26,40 +28,52 @@
         background-position: center;
         position: absolute;
         right: -212px;
-        top: -125px;
+        top: -86px;
         width: 200px; /* Ajustez la largeur selon vos besoins */
         height: 200px; /* Ajustez la hauteur selon vos besoins */
         z-index: -1;
 
     } }
 
+    .imageNomination{
+            display: flex;
+            justify-content: space-between;
+            margin: auto;
+        
+    }
     #oscars{
+        position:relative;
         overflow: hidden; /* Empêche le débordement des éléments enfants */
 
     }
     
-
-    .imageNomination {
-        mix-blend-mode: darken;
-        margin-top: -30px;
-        
+    .titreOscar h3 img {
+       width:50%;
+        font-size: 22px;  
+    }
+    h3 {
+      
+        font-size: 2rem;
+        background-image: url('./assets/images_koukaki/orange.png');
+       
     }
 
-    .titreOscar {
-        font-size: 40px;
-        font-weight: 700;
-        color: white;
-        text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
-        padding: 1.8em 2em;
-        line-height: 45px;
-        background-repeat: no-repeat;
-        background-size: contain;
-        background-position: center;
-        background-image: url('./assets/images_koukaki/orange.png');
-
-        h2 {
-            text-align: left;
+    @media screen and (max-width: 1192px) {
+        #nomination, .imageNomination {
+            display: flex;
+            flex-direction: column;
+        .titreOscar, h3 {
+                  font-size: 1rem;
+        }
         }
     }
-
+    @media screen and (max-width: 1192px){
     
+    .oscar, img{
+        max-width: 50%;
+        margin-left: 21%;
+        margin-top: 5%;
+    }
+}
+
+   
