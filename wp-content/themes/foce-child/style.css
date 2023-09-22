@@ -8,21 +8,6 @@
  Description: Thème enfant à l'occasion de la nomination aux Oscars Shorts
  Version: 0.1
  */
-.story__article:after,
-.story :after,
-.site-footer:after,
-.site-footer ul:after,
-.site-footer:before,
-.nomination:after,
-.nomination:before,
-#studio h2:before,
-#studio h2:after {
-  position: absolute;
-  display: block;
-  transform-origin: center center;
-  animation: spin 5s linear infinite; /*durée de l'animation */
-}
-
 @keyframes spin {
   from {
     transform: rotate(0);
@@ -31,6 +16,65 @@
     transform: rotate(360deg);
   }
 }
+fleurs .story__article:after {
+  position: absolute;
+  display: block;
+  transform-origin: center center;
+  animation: spin 5s linear infinite;
+}
+
+.story:after {
+  position: absolute;
+  display: block;
+  transform-origin: center center;
+  animation: spin 5s linear infinite;
+}
+
+.site-footer:after {
+  position: absolute;
+  display: block;
+  transform-origin: center center;
+  animation: spin 5s linear infinite;
+}
+.site-footer ul:after {
+  position: absolute;
+  display: block;
+  transform-origin: center center;
+  animation: spin 5s linear infinite;
+}
+.site-footer:before {
+  position: absolute;
+  display: block;
+  transform-origin: center center;
+  animation: spin 5s linear infinite;
+}
+
+.nomination:after {
+  position: absolute;
+  display: block;
+  transform-origin: center center;
+  animation: spin 5s linear infinite;
+}
+.nomination:before {
+  position: absolute;
+  display: block;
+  transform-origin: center center;
+  animation: spin 5s linear infinite;
+}
+
+#studio h2:before {
+  position: absolute;
+  display: block;
+  transform-origin: center center;
+  animation: spin 5s linear infinite;
+}
+#studio h2:after {
+  position: absolute;
+  display: block;
+  transform-origin: center center;
+  animation: spin 5s linear infinite;
+}
+
 .site-footer:after {
   height: 173px;
 }
@@ -246,7 +290,7 @@ h3 {
 
 #logo img {
   position: sticky;
-  top: 30%; /* Ajustez cette valeur selon votre besoin */
+  top: 30%;
   transform: translateY(-50%);
   z-index: 1;
   opacity: 1;
@@ -265,8 +309,6 @@ h3 {
   left: 0;
   width: 100%;
   height: 100%;
-  -o-object-fit: cover;
-     object-fit: cover;
   z-index: -1;
   width: 100%;
 }
@@ -519,7 +561,7 @@ article {
   max-width: 1440px;
   width: 100%;
   visibility: hidden;
-  transition: opacity 0, 5s ease-in;
+  transition: opacity 0.5s ease-in;
 }
 .MenuFull.nav_open {
   overflow: hidden;
@@ -540,7 +582,7 @@ article {
   font-weight: 500;
   line-height: 120px;
 }
-.MenuFull a:hover {
+.MenuFull li a:hover {
   filter: drop-shadow(0px 0px 5px #ff5c00);
   -webkit-filter: drop;
 }

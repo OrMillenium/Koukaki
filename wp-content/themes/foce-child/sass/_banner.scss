@@ -1,3 +1,4 @@
+
 /* Animation de flottement */
 @keyframes floating {
 	0%,100% {
@@ -7,7 +8,6 @@
 		transform: translateY(10px);
 	}
 }
-
 .banner {
 	background-image: url("./assets/images_koukaki/banner.png");
 	background-size: cover;
@@ -15,31 +15,27 @@
 	overflow: hidden;
 	width: 100%;
 }
-
-#logo img{
-	position: sticky;
-	top: 30%; /* Ajustez cette valeur selon votre besoin */
-	transform: translateY(-50%);
-	z-index: 1;
-	opacity: 1;
-	animation: floating 3s infinite alternate;
-	transition: opacity 1s ease, transform 1s ease;
-	width: 90%;
-}
-
-#logo.active {
-		transition: transform 0.2s ease;
+#logo {
+	img {
+		position: sticky;
+		top: 30%;
+		transform: translateY(-50%);
+		z-index: 1;
+		opacity: 1;
+		animation: floating 3s infinite alternate;
+		transition: opacity 1s ease, transform 1s ease;
+		width: 90%;
 	}
-
-
+}
+#logo.active {
+	transition: transform 0.2s ease;
+}
 #background-video {
 	position: absolute;
 	top: 0;
 	left: 0;
 	width: 100%;
 	height: 100%;
-	object-fit: cover;
 	z-index: -1;
 	width: 100%;
 }
-

@@ -58,10 +58,10 @@ sections.forEach((section) => {
 ///////////////////////////////////////////////////////////////////////////////////////////////Bannière
 // Fonction de déclenchement de l'animation de fade-in au chargement de la page
 window.addEventListener('load', function() {
-    // Sélectionnez l'élément img du logo
+    // Sélectionne l'élément img du logo
     const logoImg = document.querySelector('.banner img');
 
-    // Ajoutez la classe 'fade-in' pour déclencher l'animation
+    // Ajoute la classe 'fade-in' pour déclencher l'animation
     logoImg.classList.add('fade-in');
 });
 
@@ -88,11 +88,11 @@ coverflowEffect: {
 loop:"true",
 loopedSlides:2,
 loopAdditionalSlides:1,
-//autoplay:{
-   // delay:1000,
-   // disableOniteraction:false,
+autoplay:{
+    delay:1000,
+   disableOniteraction:false,
 
-//},
+},
 
 speed: 800,
 });
@@ -106,23 +106,23 @@ function moveCloudsOnScroll() {
     const bigCloud = document.getElementById('bigcloud');
     const littleCloud = document.getElementById('littlecloud');
 
-    // Réglez la vitesse de déplacement des nuages en fonction de vos préférences
+    // Régle la vitesse de déplacement des nuages en fonction de vos préférences
     const bigCloudSpeed = 0.3;
     const littleCloudSpeed = 0.2;
 
 
 
-    // Calculez les nouvelles positions des nuages en fonction du défilement
+    // Calcule les nouvelles positions des nuages en fonction du défilement
     const maxLeftPosition = -300; // Limite de déplacement à gauche
     const bigCloudX = -scrollY * bigCloudSpeed + 260;
     const littleCloudX = -scrollY * littleCloudSpeed;
 
-    // Appliquez les nouvelles positions aux nuages
+    // Applique les nouvelles positions aux nuages
     bigCloud.style.transform = `translateX(${bigCloudX}px)`;
     littleCloud.style.transform = `translateX(${littleCloudX}px)`;
 }
 
-// Ajoutez un écouteur d'événement de défilement pour appeler la fonction de déplacement des nuages
+// Ajoute un écouteur d'événement de défilement pour appeler la fonction de déplacement des nuages
 window.addEventListener('scroll', moveCloudsOnScroll);
 
 /////////////////////////////////////////////MENU/////////////////////////////////////
@@ -156,11 +156,11 @@ function moveLogoOnScroll() {
     // Réglez la vitesse de déplacement du logo en fonction de vos préférences
     const logoSpeed = 0.3;
     
-    // Calculez les nouvelles positions du logo en fonction du défilement
+    // Calcule les nouvelles positions du logo en fonction du défilement
     const maxDownPosition = -400; // Limite de déplacement en bas
     const logoY = -scrollY * logoSpeed + 260;
 
-    // Vérifiez la direction du défilement
+    // Vérifie la direction du défilement
     if (scrollY > previousScroll) {
         // Défilement vers le bas
         if (scrollY > maxDownPosition) {
@@ -174,5 +174,5 @@ function moveLogoOnScroll() {
     previousScroll = scrollY;
 }
 
-// Ajoutez un écouteur d'événement de défilement pour appeler la fonction de déplacement du logo
+// Ajoute un écouteur d'événement de défilement pour appeler la fonction de déplacement du logo
 window.addEventListener('scroll', moveLogoOnScroll);
