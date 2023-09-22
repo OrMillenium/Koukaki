@@ -1,4 +1,3 @@
-
 //Carroussel
 .story #characters{
   margin:0;
@@ -8,14 +7,11 @@ div .main-characters {
   
 }
 
-/* Réglez la largeur de l'article à 100% */
 article {
-  max-width: 1440px; /* Utilisation de max-width pour limiter la largeur sur les écrans larges */
+  max-width: 1440px; 
   width: 100%;
-  margin: 0 auto; /* Centrez l'article horizontalement */
+  margin: 0 auto; 
 }
-
-
 
 .main-character h3 {
   text-align: left;
@@ -28,24 +24,15 @@ article {
   margin: 0 auto; /* Centrez le carrousel horizontalement */
 }
 .swiper {
-  //width: 100%;
+  
   padding-top: 50px;
   padding-bottom: 50px;
   
 }
 
-//.swiper-slide {
-  //background-position: center;
- // background-size: cover;
- // width: 1600px;
- // height: 600px;
-//}
-
-//.swiper-slide img {
- // display: block;
-  //max-width: 1440px!important;
- // margin: 50px;
-
-//}
-
-
+@media screen and (max-width: 1192px) {
+  .story #characters  h3 {
+   text-align: center; 
+   background-position: center;
+}
+}

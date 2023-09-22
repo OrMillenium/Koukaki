@@ -100,8 +100,8 @@
   position: absolute;
   left: -130px;
   top: -80px;
-  width: 200px; /* Ajustez la largeur selon vos besoins */
-  height: 200px; /* Ajustez la hauteur selon vos besoins */
+  width: 200px;
+  height: 200px;
 }
 .nomination::after {
   content: "";
@@ -111,8 +111,8 @@
   position: absolute;
   right: -212px;
   top: -86px;
-  width: 200px; /* Ajustez la largeur selon vos besoins */
-  height: 200px; /* Ajustez la hauteur selon vos besoins */
+  width: 200px;
+  height: 200px;
   z-index: -1;
 }
 
@@ -142,8 +142,8 @@ h3 {
     display: flex;
     flex-direction: column;
   }
-  #nomination .titreOscar, #nomination h3, .imageNomination .titreOscar, .imageNomination h3 {
-    font-size: 1rem;
+  #nomination .titreOscar h3, .imageNomination .titreOscar h3 {
+    font-size: 1rem !important;
   }
 }
 @media screen and (max-width: 1192px) {
@@ -173,7 +173,7 @@ h3 {
 .banner img,
 .nomination {
   animation: fadeSlideup 3s ease-in-out forwards, fadeIn 3s ease-in-out forwards;
-  animation-delay: 0.5s; /* Ajout d'un délai pour que l'animation des autres sections soit plus visible */
+  animation-delay: 0.5s;
 }
 
 @keyframes fadeSlideDown {
@@ -206,8 +206,8 @@ h3 {
 }
 /* CSS pour l'animation de fade-in */
 .fadeIn {
-  opacity: 0; /* L'élément est initialement invisible */
-  transition: opacity 0.5s ease-in; /* Ajoute une transition pour l'opacité */
+  opacity: 0;
+  transition: opacity 0.5s ease-in;
 }
 
 /* Lorsque la classe 'visibility' est ajoutée, l'élément devient visible */
@@ -227,7 +227,7 @@ h3 {
   transform: translateY(0);
 }
 
-/* Ajoutez une animation de flottement */
+/* Animation de flottement */
 @keyframes floating {
   0%, 100% {
     transform: translateY(-10px);
@@ -279,11 +279,10 @@ div .main-characters {
   width: 1440px;
 }
 
-/* Réglez la largeur de l'article à 100% */
 article {
-  max-width: 1440px; /* Utilisation de max-width pour limiter la largeur sur les écrans larges */
+  max-width: 1440px;
   width: 100%;
-  margin: 0 auto; /* Centrez l'article horizontalement */
+  margin: 0 auto;
 }
 
 .main-character h3 {
@@ -303,6 +302,12 @@ article {
   padding-bottom: 50px;
 }
 
+@media screen and (max-width: 1192px) {
+  .story #characters h3 {
+    text-align: center;
+    background-position: center;
+  }
+}
 .story #place {
   position: relative;
   display: flex;
@@ -310,7 +315,7 @@ article {
   width: 100%;
   min-height: 699px;
   background-size: cover;
-  overflow: hidden; /* Empêche le débordement des éléments enfants */
+  overflow: hidden;
 }
 
 .story #place > div p {
@@ -383,44 +388,6 @@ article {
   transform: translateY(0px) rotateZ(-45deg);
 }
 
-.site-title {
-  text-align: center;
-  marker: none;
-  padding-left: 170px !important;
-  position: absolute;
-}
-
-.MenuFull {
-  background-color: #FFF5E9;
-  position: fixed;
-  top: 80px;
-  overflow: hidden;
-  height: 0;
-  width: 1440px;
-}
-
-.MenuFull a {
-  position: relative;
-  transform: translateY(-285px);
-  height: 0px;
-  font-size: 44px;
-  font-weight: 400;
-  margin-top: 97px;
-}
-.MenuFull a:hover {
-  color: black;
-  text-shadow: -1px -1px 3px rgba(255, 92, 0, 0.5019607843), 3px -1px 3px rgba(255, 92, 0, 0.3), -1px 3px 3px rgba(255, 92, 0, 0.3), 3px 3px 3px rgba(255, 92, 0, 0.3);
-  animation: fadeIn 3s ease-in-out forwards;
-  animation-delay: 0.5s;
-  transition: height 0.5s ease-in-out, padding-top 0.5s ease-in-out;
-}
-
-.MenuFull.nav_open {
-  height: 100%;
-  padding-top: 30%;
-  width: 1440px;
-}
-
 .logoMenu {
   position: absolute;
   left: 43%;
@@ -483,9 +450,8 @@ article {
   position: absolute;
   top: 44%;
   left: 70%;
-  width: 10%;
-  height: 14%;
-  display: block;
+  width: 109px;
+  height: 95px;
 }
 
 .catJauneMenu {
@@ -494,14 +460,6 @@ article {
   left: 101px;
   width: 105px;
   height: 95px;
-}
-
-.StudioKoukaki {
-  position: absolute;
-  top: 810px;
-  left: 643px;
-  width: 160px;
-  height: 12px;
 }
 
 .orchiMenu,
@@ -540,25 +498,89 @@ article {
   animation: floatingRight 3s infinite alternate;
 }
 
-.main-navigation ul {
-  height: 50%;
-  justify-content: space-evenly;
-  align-items: center;
-  list-style: none;
-  flex-direction: column;
-  margin-top: 2%;
+.site-title {
+  text-align: center;
+  marker: none;
+  padding-left: 170px !important;
+  position: fixed;
 }
 
 .main-navigation {
   position: absolute;
 }
 
+.MenuFull {
+  background-color: #FFF5E9;
+  position: fixed;
+  top: 80px;
+  font-size: 44px;
+  opacity: 0;
+  height: 100vh;
+  max-width: 1440px;
+  width: 100%;
+  visibility: hidden;
+  transition: opacity 0, 5s ease-in;
+}
+.MenuFull.nav_open {
+  overflow: hidden;
+  height: 100vh;
+  opacity: 1;
+  visibility: visible;
+}
+.MenuFull ul {
+  text-align: center;
+  height: 300px;
+  margin: 11% 0;
+  padding: 0;
+}
+.MenuFull li a {
+  text-decoration: none;
+  list-style-type: none;
+  font-size: 40px;
+  font-weight: 500;
+  line-height: 120px;
+}
+.MenuFull a:hover {
+  filter: drop-shadow(0px 0px 5px #ff5c00);
+  -webkit-filter: drop;
+}
+.MenuFull img {
+  margin: auto;
+  display: flex;
+}
+.MenuFull p {
+  font-size: 20px;
+  margin-top: 299px;
+  text-align: center;
+}
+
+@media screen and (max-width: 1192px) {
+  .toggle_btn {
+    margin-right: 0;
+  }
+  .MenuFull ul {
+    margin: 44% 0;
+  }
+  .MenuFull li a {
+    font-size: 30px;
+    font-weight: 200;
+    line-height: 96px;
+  }
+  .MenuFull {
+    top: 54px;
+  }
+}
 #studio {
   position: relative;
   margin-top: 3em;
   overflow: hidden;
 }
 
+@media screen and (max-width: 1192px) {
+  h2 {
+    font-size: 2rem;
+  }
+}
 /* Vidéo Sur les écrans, quand la largeur de la fenêtre fait au maximum 1280px */
 @media screen and (max-width: 576px) {
   #background-video {

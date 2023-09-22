@@ -50,71 +50,7 @@ $background-color_2: transparent;
 	}
 }
 
-
-
-
-
-
-
-
-
-
-
-
-//////////////////////////////////////////////////fullscreen menu/////////////////////////////////////////////////
-/// 
-/// 
-
-
-
-
-$color_1: black;
-$background-color_1: #FFF5E9;
-
-.site-title {
-	text-align: center;
-	marker: none;
-	padding-left: 170px !important;
-	position: absolute;
-}
-.MenuFull {
-	background-color: $background-color_1;
-	position: fixed;
-	top: 80px;
-	overflow: hidden;
-	height: 0;
-	width: 1440px;
-}
-	
-	
-.MenuFull	a {
-		position: 	relative;
-		transform: translateY(-285px);
-		height: 0px;
-		font-size: 44px;
-		font-weight: 400;
-		margin-top: 97px;
-		&:hover {
-			color: $color_1;
-			text-shadow: -1px -1px 3px #ff5c0080, 3px -1px 3px rgba(255, 92, 0, 0.3), -1px 3px 3px rgba(255, 92, 0, 0.3), 3px 3px 3px rgba(255, 92, 0, 0.3);
-		animation:  fadeIn 3s ease-in-out forwards;
-	    animation-delay: 0.5s;transition: height 0.5s ease-in-out, padding-top 0.5s ease-in-out;}
-	}
-
-.MenuFull.nav_open {
-	height: 100%;
-	padding-top: 30%;
-	width:1440px;
-	 
-}
-	
-	  
-
-
-
-
-/////////////////////////////////////////
-		
+/////////////////img MenuFull/////////////		
 .logoMenu {
     
     position: absolute;
@@ -172,9 +108,9 @@ $background-color_1: #FFF5E9;
 	position: absolute;
 	top: 44%;
 	left: 70%;
-	width: 10%;
-	height: 14%;
-	display: block;
+	width: 109px;
+	height:95px;
+	
 }
 .catJauneMenu {
 	position: absolute;
@@ -183,11 +119,5 @@ $background-color_1: #FFF5E9;
 	width: 105px;
 	height: 95px;
 }
-.StudioKoukaki {
-	position: absolute;
-	top: 810px;
-	left: 643px;
-	width: 160px;
-	height: 12px;
-}
+
 

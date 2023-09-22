@@ -1,8 +1,8 @@
 
 /* CSS pour l'animation de fade-in */
 .fadeIn {
-    opacity: 0; /* L'élément est initialement invisible */
-    transition: opacity 0.5s ease-in; /* Ajoute une transition pour l'opacité */
+    opacity: 0; 
+    transition: opacity 0.5s ease-in; 
 }
 
 /* Lorsque la classe 'visibility' est ajoutée, l'élément devient visible */
@@ -17,7 +17,6 @@
     margin-right: 15px;
     opacity: 0;
     transform: translateY(100%);
-
     transition: opacity 0.2s ease-in, transform 0.5s ease-in;
 
     &.visibility {
