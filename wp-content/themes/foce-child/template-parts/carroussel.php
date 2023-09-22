@@ -1,7 +1,7 @@
 <article id="characters">
     <div class="main-character">
         <h3>Les personnages</h3>
-        <div class="swiper mySwiper">
+        <div class="swiper-container mySwiper">
             <div class="swiper-wrapper">
                 <div class="swiper-slide">
                     <img src=<?php echo get_theme_file_uri("./assets/images_koukaki/Kawaneko.png");?> alt="Kawaneko Character" />

@@ -70,11 +70,11 @@ window.addEventListener('load', function() {
 
 
 ///////////////////////////////////////////////CARROUSSEL//////////////////////////////////////////////Carroussel
-const swiper = new Swiper(".swiper", {
+const swiper = new Swiper(".mySwiper", {
     effect: "coverflow",
-grabcursor: true,
-centeredSlides: true,
-slidesPerView: "auto",
+    grabcursor: true,
+    centeredSlides: true,
+    slidesPerView: "auto",
 direction:'horizontal',
 
 coverflowEffect: {
