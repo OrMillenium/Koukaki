@@ -34,10 +34,10 @@ get_header();
         );
         $characters_query = new WP_Query($args);
         ?>
-            <article>
+            
                     <?php get_template_part('template-parts/carroussel'); ?>
             
-            </article>
+            
 
             <article id="place">
                 <div>

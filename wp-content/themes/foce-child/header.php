@@ -29,14 +29,15 @@
 
 	<header id="masthead" class="site-header">
 		<nav id="site-navigation" class="main-navigation">
-          
+
+            <ul>
+	             <li class="koukaki-title"><a href="<?php echo esc_url( home_url( '/' ) ); ?>" rel="home"><?php bloginfo( 'name' ); ?></a></li>
+            </ul>
 		
 				 <div class="toggle_btn ">
                      <span> </span>
                  </div> 
-            <ul>
-	             <li class="site-title"><a href="<?php echo esc_url( home_url( '/' ) ); ?>" rel="home"><?php bloginfo( 'name' ); ?></a></li>
-            </ul>
+          
         </nav><!-- #site-navigation -->    
 
 			<div class="MenuFull">

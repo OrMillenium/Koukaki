@@ -88,11 +88,11 @@ coverflowEffect: {
 loop:"true",
 loopedSlides:2,
 loopAdditionalSlides:1,
-//autoplay:{
-  //  delay:1000,
-  // disableOnInteraction:false,
+autoplay:{
+   delay:1000,
+   disableOnInteraction:false,
 
-//},
+},
 
 speed: 800,
 });
