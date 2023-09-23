@@ -1,38 +1,60 @@
-//Carroussel
-.story #characters{
-  margin:0;
-}
-div .main-characters {
-  width: 1440px;
-  
-}
 
+//Carroussel {
+	.story {
+		#characters {
+			margin: 0;
+		}
+	}
+
+//div {
+	//.main-characters {
+	//	width: 100%;
+	//}
+//}
 article {
-  max-width: 1440px; 
-  width: 100%;
-  margin: 0 auto; 
+	max-width: 1440px;
+	width: 100%;
+	margin: 0 auto;
+}
+.main-characters {
+	h3 {
+		text-align: left;
+	  background-position: left;
+		padding: 50px 30px;
+		margin: 0;
+	}
 }
 
-.main-character h3 {
-  text-align: left;
-  background-position:left ;
-  padding: 50px 30px;
-  margin: 0; 
-}
-.mySwiper{
-  max-width: 1440px;
-  margin: 0 auto; /* Centrez le carrousel horizontalement */
-}
-.swiper {
-  
-  padding-top: 50px;
-  padding-bottom: 50px;
-  
+////.swiper {
+	//padding-top: 50px;
+	//padding-bottom: 50px;
+  //width: 100%;
+
+
+//&-slide{
+  //width: 500px;
+  //height: 500px;
+  //background-position: center;
+  //background-size: cover;
+
+
+ //img{
+  //display: block;
+  //width: 100%;
+//}
+//}
+//}
+
+
+ @media screen and (max-width: 1192px) {
+	.story {
+		#characters {
+			h3 {
+				text-align: center;
+				background-position: center;
+			}
+		}
+	
+	}
 }
 
-@media screen and (max-width: 1192px) {
-  .story #characters  h3 {
-   text-align: center; 
-   background-position: center;
-}
-}

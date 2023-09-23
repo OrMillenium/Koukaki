@@ -1,22 +1,24 @@
 <article id="characters">
-    <div class="main-character">
+    <div class="main-characters">
         <h3>Les personnages</h3>
-        <div class="swiper-container mySwiper">
+        
+        <div class="swiper mySwiper">
             <div class="swiper-wrapper">
                 <div class="swiper-slide">
-                    <img src=<?php echo get_theme_file_uri("./assets/images_koukaki/Kawaneko.png");?> alt="Kawaneko Character" />
+                <img src="wp-content\uploads\2022\06\Kawaneko.png" /><p>Kawaneko</p>
                 </div>
                 <div class="swiper-slide">
-                    <img src=<?php echo get_theme_file_uri("./assets/images_koukaki/Orenjiiro.png");?> alt="Orenjiiro Character" />
+                <img src="wp-content\uploads\2022\06\Orenjiiro-1.png" /><p>Orenjiiro</p>
                 </div>
                 <div class="swiper-slide">
-                    <img src=<?php echo get_theme_file_uri("./assets/images_koukaki/Pinku.png");?> alt="Pinku Character" />
+                <img src="wp-content\uploads\2022\06\Pinku-1.png" /><p>Pinku</p> 
+                         
                 </div>
                 <div class="swiper-slide">
-                    <img src=<?php echo get_theme_file_uri("./assets/images_koukaki/Tenshi.png");?> alt="Tenshi Character" />
+                <img src="wp-content\uploads\2022\06\Tenshi-1.png" /><p>Tenshi</p>
                 </div>
                 <div class="swiper-slide">
-                    <img src=<?php echo get_theme_file_uri("./assets/images_koukaki/Jaakuna.png");?> alt="Jaakuna Character" />
+                <img src="wp-content\uploads\2022\06\Jaakuna-1.png" /><p>Jaakuna</p> 
                 </div>
             </div>
             <div class="swiper-pagination"></div>

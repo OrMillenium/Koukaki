@@ -9,7 +9,7 @@ add_action('wp_enqueue_scripts', 'enqueue_swiper');
 add_action('wp_enqueue_scripts', 'theme_enqueue_scripts');
 function theme_enqueue_scripts() {
     wp_enqueue_script('scripts', get_stylesheet_directory_uri() . '/js/script.js', array('jquery', 'swiper-js'), '6.5.7', true);
-    //wp_enqueue_script('scripts', get_stylesheet_directory_uri() . '/js/cloud.js', array(), '1.0', true);
+  
 }
 
 
@@ -21,7 +21,7 @@ function theme_enqueue_styles() {
 }
 
 
-// Copier les options du personnalisateur du thème parent vers le thème enfant
+// Copie les options du personnalisateur du thème parent vers le thème enfant
 if ( get_stylesheet() !== get_template() ) {
     add_filter( 'pre_update_option_theme_mods_' . get_stylesheet(), function ( $value, $old_value ) {
         update_option( 'theme_mods_' . get_template(), $value );

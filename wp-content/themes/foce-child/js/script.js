@@ -70,7 +70,7 @@ window.addEventListener('load', function() {
 
 
 ///////////////////////////////////////////////CARROUSSEL//////////////////////////////////////////////Carroussel
-const swiper = new Swiper(".mySwiper", {
+const swiper = new Swiper(".swiper", {
     effect: "coverflow",
     grabcursor: true,
     centeredSlides: true,
@@ -78,7 +78,7 @@ const swiper = new Swiper(".mySwiper", {
 direction:'horizontal',
 
 coverflowEffect: {
-    rotate: 90,
+    rotate: 70,
     stretch: 0,
     depth: 50,
     modifier: 1,
@@ -88,11 +88,11 @@ coverflowEffect: {
 loop:"true",
 loopedSlides:2,
 loopAdditionalSlides:1,
-autoplay:{
-    delay:1000,
-   disableOniteraction:false,
+//autoplay:{
+  //  delay:1000,
+  // disableOnInteraction:false,
 
-},
+//},
 
 speed: 800,
 });
@@ -157,8 +157,8 @@ function moveLogoOnScroll() {
     const logoSpeed = 0.3;
     
     // Calcule les nouvelles positions du logo en fonction du défilement
-    const maxDownPosition = -400; // Limite de déplacement en bas
-    const logoY = -scrollY * logoSpeed + 260;
+    const maxDownPosition = -2500; // Limite de déplacement en bas
+    const logoY = -scrollY * logoSpeed + 160;
 
     // Vérifie la direction du défilement
     if (scrollY > previousScroll) {

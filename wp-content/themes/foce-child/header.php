@@ -15,8 +15,7 @@
 <head>
 	<meta charset="<?php bloginfo( 'charset' ); ?>">
 	<meta name="viewport" content="width=device-width, initial-scale=1">
-	<link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css" />
-    <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
+	
     
 
 	<?php wp_head(); ?>
@@ -35,7 +34,7 @@
 				 <div class="toggle_btn ">
                      <span> </span>
                  </div> 
-  <ul>
+            <ul>
 	             <li class="site-title"><a href="<?php echo esc_url( home_url( '/' ) ); ?>" rel="home"><?php bloginfo( 'name' ); ?></a></li>
             </ul>
         </nav><!-- #site-navigation -->    

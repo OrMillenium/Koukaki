@@ -24,7 +24,16 @@ get_header();
             <article id="" class="story__article">
                 <p><?php echo get_theme_mod('story'); ?></p>
             </article>
-            
+            <?php
+        $args = array(
+            'post_type' => 'characters',
+            'posts_per_page' => -1,
+            'meta_key' => '_main_char_field',
+            'orderby' => 'meta_value_num',
+
+        );
+        $characters_query = new WP_Query($args);
+        ?>
             <article>
                     <?php get_template_part('template-parts/carroussel'); ?>
             

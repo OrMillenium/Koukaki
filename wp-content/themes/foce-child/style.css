@@ -191,7 +191,7 @@ h3 {
   }
 }
 @media screen and (max-width: 1192px) {
-  .oscar, img {
+  .imageNomination img {
     max-width: 50%;
     margin-left: 21%;
     margin-top: 5%;
@@ -201,12 +201,14 @@ h3 {
 .studio,
 .site-footer,
 .story,
-.nomination {
+.nomination,
+.MenuFull .nav_open {
   opacity: 0;
   transform: translateY(0);
 }
 
-.banner {
+.banner,
+.MenuFull .nav_open {
   animation: fadeSlideDown 3s ease-in-out forwards, fadeIn 3s ease-in-out forwards;
   animation-delay: 0.5s; /* Ajout d'un délai pour que l'animation de la bannière soit plus visible */
 }
@@ -214,7 +216,6 @@ h3 {
 .studio,
 .site-footer,
 .story,
-.banner img,
 .nomination {
   animation: fadeSlideup 3s ease-in-out forwards, fadeIn 3s ease-in-out forwards;
   animation-delay: 0.5s;
@@ -285,18 +286,16 @@ h3 {
   background-size: cover;
   position: relative;
   overflow: hidden;
-  width: 100%;
+  min-height: 806px;
 }
 
 #logo img {
-  position: sticky;
-  top: 30%;
-  transform: translateY(-50%);
-  z-index: 1;
-  opacity: 1;
+  width: 75%;
+  margin-left: 16%;
   animation: floating 3s infinite alternate;
+  animation: fadeSlideup 3s ease-in-out forwards, fadeIn 3s ease-in-out forwards;
+  animation-delay: 0.5s;
   transition: opacity 1s ease, transform 1s ease;
-  width: 90%;
 }
 
 #logo.active {
@@ -307,18 +306,13 @@ h3 {
   position: absolute;
   top: 0;
   left: 0;
-  width: 100%;
-  height: 100%;
   z-index: -1;
-  width: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
 }
 
 .story #characters {
   margin: 0;
-}
-
-div .main-characters {
-  width: 1440px;
 }
 
 article {
@@ -327,21 +321,11 @@ article {
   margin: 0 auto;
 }
 
-.main-character h3 {
+.main-characters h3 {
   text-align: left;
   background-position: left;
   padding: 50px 30px;
   margin: 0;
-}
-
-.mySwiper {
-  max-width: 1440px;
-  margin: 0 auto; /* Centrez le carrousel horizontalement */
-}
-
-.swiper {
-  padding-top: 50px;
-  padding-bottom: 50px;
 }
 
 @media screen and (max-width: 1192px) {
@@ -598,7 +582,8 @@ article {
 
 @media screen and (max-width: 1192px) {
   .toggle_btn {
-    margin-right: 0;
+    margin-right: 20px;
+    margin-bottom: 10px;
   }
   .MenuFull ul {
     margin: 44% 0;
