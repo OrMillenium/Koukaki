@@ -4,15 +4,15 @@
 .site-footer,
 .story,
 .nomination,
-.MenuFull .nav_open{
+ .nav_open{
   opacity: 0;
  transform: translateY(0);
 }
 
 .banner,
-.MenuFull .nav_open{
+.nav_open{
   animation: fadeSlideDown 3s ease-in-out forwards, fadeIn 3s ease-in-out forwards;
-  animation-delay: 0.5s; /* Ajout d'un délai pour que l'animation de la bannière soit plus visible */
+  animation-delay: 0.5s;
 }
 
 

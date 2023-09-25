@@ -7,8 +7,8 @@
 		transform: rotate(360deg);
 	}
 }
-//animation {
-	fleurs {
+
+
 		.story__article {
 			&:after {
 				position: absolute;
@@ -17,9 +17,9 @@
 				animation: spin 5s linear infinite;
 			}
 		}
-	}
+	
 
-.story {
+.story h2{
 	&:after {
 		position: absolute;
 		display: block;

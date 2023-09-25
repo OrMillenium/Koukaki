@@ -127,14 +127,12 @@ window.addEventListener('scroll', moveCloudsOnScroll);
 
 /////////////////////////////////////////////MENU/////////////////////////////////////
 const toggle_btn = document.querySelector('.toggle_btn');
- const burger = document.querySelector('.MenuFull');
-        
-        toggle_btn.addEventListener('click', () => {
-            burger.classList.toggle('nav_open');
-            toggle_btn.classList.toggle('active');
-        });
+const burger = document.querySelector('.MenuFull');
 
-
+toggle_btn.addEventListener('click', () => {
+    burger.classList.toggle('nav_open');
+    toggle_btn.classList.toggle('active');
+});
 
         
             // Ajoute un événement de clic à chaque lien dans le menu
@@ -151,28 +149,29 @@ let previousScroll = 0;
 
 function moveLogoOnScroll() {
     const scrollY = window.scrollY;
-    const logo = document.getElementById('logo');
-    
-    // Réglez la vitesse de déplacement du logo en fonction de vos préférences
-    const logoSpeed = 0.3;
-    
-    // Calcule les nouvelles positions du logo en fonction du défilement
-    const maxDownPosition = -2500; // Limite de déplacement en bas
-    const logoY = -scrollY * logoSpeed + 160;
+    const logo = document.querySelector('#logo.active');
 
-    // Vérifie la direction du défilement
+    const logoSpeed = 1;
+    const maxDownPosition = -100;
+    const logoY = Math.min(scrollY * logoSpeed, maxDownPosition) + 200;
+    const parallaxEffect = scrollY * 0.2;
+
     if (scrollY > previousScroll) {
-        // Défilement vers le bas
         if (scrollY > maxDownPosition) {
-            logo.style.transform = `translateY(${logoY}px)`;
+            logo.classList.add('parallax');
+            logo.style.transform = `translateY(${logoY}px) translateY(${parallaxEffect}px)`;
         }
     } else {
-        // Défilement vers le haut
-        logo.style.transform = 'translateY(0)';
+        if (scrollY > maxDownPosition) {
+            logo.classList.add('parallax');
+            logo.style.transform = `translateY(0) translateY(${parallaxEffect}px)`;
+        } else {
+            logo.classList.remove('parallax');
+            logo.style.transform = `translateY(0) translateY(${parallaxEffect}px)`;
+        }
     }
 
     previousScroll = scrollY;
 }
 
-// Ajoute un écouteur d'événement de défilement pour appeler la fonction de déplacement du logo
 window.addEventListener('scroll', moveLogoOnScroll);

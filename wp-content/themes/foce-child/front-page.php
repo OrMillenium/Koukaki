@@ -9,7 +9,7 @@ get_header();
              
  <section class="banner">
               
-                <div id="logo" class="active">
+                <div id="logo" class="active parallax">
                 
                      <img  src="<?php echo get_template_directory_uri() . '/assets/images/logo.png'; ?> " alt="logo Fleurs d'oranger & chats errants">
                 </div>

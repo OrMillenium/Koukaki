@@ -14,24 +14,34 @@
 	position: relative;
 	overflow: hidden;
 	min-height: 806px;
+	margin-top: 80px;
 }
 #logo {
 	img {
 		width: 75%;
 		margin-left: 16%;
 		animation: floating 3s infinite alternate;
-		animation: fadeSlideup 3s ease-in-out forwards, fadeIn 3s ease-in-out forwards;
         animation-delay: 0.5s;
 		transition: opacity 1s ease, transform 1s ease;
+		position: relative;
 	}
 }
 #logo.active {
-	transition: transform 0.2s ease;
+    position: relative; /* ou 'fixed' si cela convient mieux à votre mise en page */
+    perspective: 1000px; /* Ajustez la perspective selon votre préférence */
+    transition: transform 0.2s ease;
+	z-index: 2;
 }
+
+
+
+
 #background-video {
 	position: absolute;
 	top: 0;
 	left: 0;
 	z-index: -1;
 	object-fit: cover;
+	height: 100%;
+	width:100%;
 }

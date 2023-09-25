@@ -30,6 +30,7 @@ $background-color_1: #FFF5E9;
 .toggle_btn {
     width: 22px;
     height: 11px;
+    margin-right: 25px;
 }
 }
 
@@ -40,22 +41,25 @@ $background-color_1: #FFF5E9;
 
 .MenuFull {
     background-color: $background-color_1;
-    position: fixed;
     top: 80px;
     font-size: 44px;
     opacity: 0;
-    height: 100vh;
+    height: 0;
     max-width: 1440px; 
     width: 100%;
-    visibility: hidden;
-    transition: opacity 0.5s ease-in;
+    visibility:hidden;
+    overflow: hidden; /* Ajoutez cette ligne pour cacher le contenu qui dépasse */
+    transition: opacity 0.5s ease-in, height 0.5s ease-in;
 
-    &.nav_open {
-        overflow: hidden;
-        height: 100vh;
-        opacity: 1;
-        visibility: visible;
-    }
+   
+ &.nav_open {
+    opacity: 1;
+    height: 100vh;
+    visibility: visible;
+    display: block; /* Affichez l'élément lorsque la classe .nav_open est présente */
+    transition: opacity 0.5s ease-in, height 0.5s ease-in;
+}
+ 
     
     ul {
         text-align: center;
@@ -68,7 +72,7 @@ $background-color_1: #FFF5E9;
     li a {
         text-decoration: none;
         list-style-type: none;
-        font-size: 40px;
+        font-size: 20px;
         font-weight: 500;
         line-height: 120px;
 
@@ -87,9 +91,9 @@ $background-color_1: #FFF5E9;
         font-size: 20px;
         text-align: center;
     }
-}
 
-@media screen and(max-width:1024px) {
+}
+@media screen and (max-width:1024px){
     .toggle_btn {
         margin-right: 20px;
         margin-bottom: 14px;
@@ -224,7 +228,7 @@ $background-color_1: #FFF5E9;
 
 
 
-@media screen and (min-width: 1025px )and(max-width: 1280px) {
+@media screen and (min-width: 1025px ) and (max-width: 1280px) {
     .MenuFull li {
          margin: 0;
         }
@@ -243,6 +247,4 @@ $background-color_1: #FFF5E9;
     .MenuFull p {
         font-size: 13px;
     }
-
-       
 }
