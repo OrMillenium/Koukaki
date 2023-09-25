@@ -1,12 +1,8 @@
 console.log("le JavaScript fonctionne correctement!")
 
-// Fonction de déclenchement de l'animation de fade-in avec le paramètre entry
+// animation de fade-in 
 function fadeInAnimation(entry) {
-    // Animation apparition des titres
-    // Sélection de l'élément de titre (h2 ou h3) dans l'élément cible
     const title = entry.target.querySelector('h2, h3');
-
-    // Vérification si le titre existe et s'il a du contenu
     if (title && title.textContent) {
         // Division du contenu du titre en mots
         const words = title.textContent.split(' ');

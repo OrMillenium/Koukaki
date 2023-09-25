@@ -27,25 +27,4 @@
       height:109px;
     }
     
-    @media (max-width: 768px) {
-      .site-footer:after {
-          height: auto;
-      }
-  
-      .story__article:after {
-          height: auto !important;
-      }
-  
-      .story:after {
-          height: auto;
-      }
-  
-      .site-footer:after,
-      .site-footer ul:after,
-      .site-footer:before,
-      #studio h2:before,
-      #studio h2:after {
-          height: auto !important;
-          display: none !important;
-      }
-    }
+    

@@ -16,6 +16,8 @@
 	min-height: 806px;
 	margin-top: 80px;
 }
+
+
 #logo {
 	img {
 		width: 75%;
@@ -27,8 +29,8 @@
 	}
 }
 #logo.active {
-    position: relative; /* ou 'fixed' si cela convient mieux à votre mise en page */
-    perspective: 1000px; /* Ajustez la perspective selon votre préférence */
+    position: relative; 
+    perspective: 1000px; 
     transition: transform 0.2s ease;
 	z-index: 2;
 }

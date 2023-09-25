@@ -1,0 +1,314 @@
+
+//navigation//
+
+@media screen and (max-width: 720px){
+    .main-navigation ul {
+        display: flex;
+        margin: 0;
+        justify-content: center;
+    }
+    
+    .site-title{
+        padding-left: 0!important; 
+        
+    }
+    .main-navigation .site-title {
+        font-size: 11px;
+        margin-top: 10%;
+    
+    }
+    .toggle_btn {
+        width: 28px;
+        height: 11px;
+        margin-right: 44px;
+        margin-bottom: 14px;
+    }
+    }
+
+//Menu//
+    @media  screen and (min-width: 601px) and (max-width: 1024px) {
+        .toggle_btn {
+            margin-right: 40px;
+            margin-bottom: 14px;
+        }
+    
+        .MenuFull li a {
+            font-size: 30px;
+            font-weight: 200;
+            line-height: 96px;
+        }  
+    
+        .MenuFull {
+            top: 41px;
+        } 
+        
+    
+    
+        .MenuFull li{
+            margin: 3%;
+        }
+    
+        .MenuFull ul{
+            margin-top:3%;
+        
+        }
+        .orchiMenu {
+            max-width: 30%;
+        }
+    
+        .catMenu {
+            left: 181px;
+        }
+     
+        .hibisMenu {
+            top: 70%;
+            left: 69%;
+            width: 395px;
+            height: 395px;
+        }
+    
+        .catGrisMenu {
+            top: 32%;
+            left: 74%;
+            width: 109px;
+            height: 95px;
+        }
+        .flowerMenu {
+            top: 359px;
+            left: 155px;
+            width: 70px;
+            height: 70px;
+        }
+        .randomMenu {
+            top: 25%;
+            left: 96%;
+        }
+    
+        .sunFlower {
+            top: 10%;
+            left: 74%;
+            width: 150px;
+            height: 150px;
+    } 
+    
+    }
+    
+    @media screen and (max-width: 600px) {
+        
+        .logoMenu {
+            padding-top: 15%;
+        }
+        .MenuFull li a {
+            font-size: 15px;
+        }  
+        .MenuFull ul {
+            height: 56%;
+        }
+    
+        .MenuFull p {
+            font-size: 10px;
+        }
+        .catMenu {
+            left: 33px;
+            width: 60px;
+            height: 70px;
+        }
+        .flowerMenu {
+            top: 338px;
+            left: 38px;
+            width: 41px;
+            height: 42px;
+        }
+    
+        .catJauneMenu {
+            position: absolute;
+            top: 499px;
+            left: 20px;
+            width: 57px;
+            height: 52px;
+        }
+    
+      
+        .sunFlower {
+            top: 90px;
+        left: 76%;
+        width: 65px;
+        height: 65px;
+         }
+        
+        .randomMenu {
+            float: right;
+            top: 28%;
+            left: 93%;
+            width: 50px;
+            height: 50px;
+        }
+        .catGrisMenu {
+            top: 37%;
+            left: 69%;
+            width: 67px;
+            height: 67px;
+        }
+        .hibisMenu {
+            top: 546px;
+            left: 79%;
+            width: 35%;
+            height: 18%;
+        }
+        .orchiMenu {
+        
+            top: 80px;
+            max-width: 20%;
+            left: 23px;
+        }
+        
+    
+    }
+    
+    
+    
+    @media screen and (min-width: 1025px ) and (max-width: 1280px) {
+        .MenuFull li {
+             margin: 0;
+            }
+        
+        .MenuFull li a {
+            font-size: 19px;
+            line-height: 16px;
+        }
+    
+        .MenuFull ul {
+            height: 52%;
+            margin: 0;
+            padding: 0;
+        }
+    
+        .MenuFull p {
+            font-size: 13px;
+        }
+    }
+
+//carroussel//
+    @media screen and (max-width: 600px) {
+        .swiper img{
+            max-width: 100px;
+        }
+    }
+    
+    @media screen and (min-width: 601px) and (max-width: 1024px) {
+        .swiper img{
+            max-width: 200px;
+        }
+    
+    }
+
+    //oscars//
+
+    @media screen and (max-width: 1192px) {
+        #nomination, .imageNomination {
+            display: flex;
+            flex-direction: column;
+        }
+
+        .imageNomination img{
+        max-width: 50%;
+        margin-left: 25%;
+        margin-top: 5%;
+        }
+    }
+    @media screen and (max-width: 720px){
+        #oscars{
+            padding-top: 56px;
+            padding-bottom: 165px;
+        }
+        .titreOscar, h3 {
+                 font-size: 1rem !important;
+                 line-height: 1;
+        }
+        .nomination::after {
+            right: -15px;
+            top: 254px;
+            width: 100px;
+            height: 100px;
+        }
+        
+        .nomination::before {
+            left: 29px;
+            top: -82px;
+            width: 100px;
+            height: 100px;
+        }
+    
+    }
+
+
+//fleurs//
+
+@media (max-width: 768px) {
+    .site-footer:after {
+        height: auto;
+    }
+
+    .story__article:after {
+        height: auto !important;
+    }
+
+    .story:after {
+        height: auto;
+    }
+
+    .site-footer:after,
+    .site-footer ul:after,
+    .site-footer:before,
+    #studio h2:before,
+    #studio h2:after {
+        height: auto !important;
+        display: none !important;
+    }
+  }
+
+//banner//
+  @media screen and (max-width: 720px){
+  .banner {
+   
+     margin-top: 50px; 
+}
+  }
+
+//Titres//
+
+    @media screen and (max-width: 1192px){
+        h2{
+            font-size: 2rem;
+        }
+        h3 {
+            font-size: 2rem;
+            text-align: center;
+            background-position: center;
+            padding: 50px 60px;
+            }
+        }
+        
+
+    @media screen and (max-width: 720px){
+        main-characters,h3{
+            padding: 34px 60px;
+        }
+ }
+
+
+
+ //footer//
+ @media screen and (max-width: 1192px){
+    .site-footer {
+        padding-top: 3em;
+    }
+}
+
+//studio fleur//
+@media screen and (max-width: 1192px){
+#studio h2::before {
+    left: -3em;
+}
+}
+    

@@ -11,7 +11,7 @@
         position: absolute;
         display: block;
         transform-origin: center center;
-        animation: spin 5s linear infinite; /*durée de l'animation */
+        animation: spin 5s linear infinite; 
         
         }
         @keyframes spin {
@@ -28,13 +28,13 @@
               transform: translateX(0);
             }
             100% {
-              transform: translateX(20px); /* Ajustez la valeur selon vos besoins */
+              transform: translateX(20px); 
             }
           }
           
           .catJauneMenu,
           .catMenu {
-            animation: floating 3s infinite alternate; /* Gardez l'animation existante */
+            animation: floating 3s infinite alternate; 
           }
           
           .catGrisMenu {

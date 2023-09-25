@@ -30,7 +30,7 @@
         top: -86px;
         width: 200px; 
         height: 200px; 
-        z-index: -1;
+       // z-index: -1;
 
     } }
 
@@ -42,7 +42,7 @@
     }
     #oscars{
         position:relative;
-        overflow: hidden; /* Empêche le débordement des éléments enfants */
+        overflow: hidden; 
 
     }
     
@@ -57,22 +57,6 @@
        
     }
 
-    @media screen and (max-width: 1192px) {
-        #nomination, .imageNomination {
-            display: flex;
-            flex-direction: column;
-        .titreOscar h3 {
-                 font-size: 1rem !important;
-        }
-        }
-    }
-    @media screen and (max-width: 1192px){
     
-    .imageNomination img{
-        max-width: 50%;
-        margin-left: 21%;
-        margin-top: 5%;
-    }
-}
 
    

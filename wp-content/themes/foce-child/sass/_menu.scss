@@ -57,17 +57,18 @@ $background-color_2: transparent;
 		display: block;
 		width: 200px;
 		margin: auto;
-		padding-top: 4%;
+		padding-top:8%;
 }
   
 	
-.orchiMenu {
+ .orchiMenu {
 	position: absolute;
 	top: 70px;
 	height: auto;
 	max-width: 100%;
 	left: -60px;
-	z-index: -1;
+	
+
 }
 .catMenu {
 	position: absolute;

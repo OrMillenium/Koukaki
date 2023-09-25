@@ -9,34 +9,15 @@ $background-color_1: #FFF5E9;
 }
 .main-navigation ul .site-title {
     display: block;
-}
-
-@media screen and (max-width: 720px){
-.main-navigation ul {
-    display: flex;
-    margin: 0;
-    justify-content: center;
-}
-
-.site-title{
-    padding-left: 0!important; 
     
 }
-.main-navigation .site-title {
-    font-size: 11px;
-    margin-top: 10%;
 
+main {
+    overflow: hidden;
 }
-.toggle_btn {
-    width: 22px;
-    height: 11px;
-    margin-right: 25px;
-}
-}
-
-
 .main-navigation {
     position: absolute;
+    
 }
 
 .MenuFull {
@@ -48,16 +29,18 @@ $background-color_1: #FFF5E9;
     max-width: 1440px; 
     width: 100%;
     visibility:hidden;
-    overflow: hidden; /* Ajoutez cette ligne pour cacher le contenu qui dépasse */
     transition: opacity 0.5s ease-in, height 0.5s ease-in;
+    overflow: hidden;
 
    
  &.nav_open {
     opacity: 1;
     height: 100vh;
     visibility: visible;
-    display: block; /* Affichez l'élément lorsque la classe .nav_open est présente */
+    display: block; 
     transition: opacity 0.5s ease-in, height 0.5s ease-in;
+    width:100%;
+    overflow: hidden;
 }
  
     
@@ -74,7 +57,7 @@ $background-color_1: #FFF5E9;
         list-style-type: none;
         font-size: 20px;
         font-weight: 500;
-        line-height: 120px;
+        line-height: 104px;
 
         &:hover {
             filter: drop-shadow(0px 0px 5px #ff5c00);
@@ -92,159 +75,4 @@ $background-color_1: #FFF5E9;
         text-align: center;
     }
 
-}
-@media screen and (max-width:1024px){
-    .toggle_btn {
-        margin-right: 20px;
-        margin-bottom: 14px;
-    }
-
-    .MenuFull li a {
-        font-size: 30px;
-        font-weight: 200;
-        line-height: 96px;
-    }  
-
-    .MenuFull {
-        top: 41px;
-    } 
-    
-
-
-    .MenuFull li{
-        margin: 3%;
-    }
-
-    .MenuFull ul{
-        margin-top:3%;
-    
-    }
-    .orchiMenu {
-        max-width: 30%;
-    }
-
-    .catMenu {
-        left: 181px;
-    }
- 
-    .hibisMenu {
-        top: 70%;
-        left: 69%;
-        width: 395px;
-        height: 395px;
-    }
-
-    .catGrisMenu {
-        top: 32%;
-        left: 74%;
-        width: 109px;
-        height: 95px;
-    }
-    .flowerMenu {
-        top: 359px;
-        left: 155px;
-        width: 70px;
-        height: 70px;
-    }
-    .randomMenu {
-        top: 25%;
-        left: 96%;
-    }
-
-    .sunFlower {
-        top: 10%;
-        left: 74%;
-        width: 150px;
-        height: 150px;
-} 
-
-}
-
-@media screen and (max-width: 600px) {
-    
-    .logoMenu {
-        padding-top: 15%;
-    }
-    .MenuFull li a {
-        font-size: 15px;
-    }  
-    .MenuFull ul {
-        height: 56%;
-    }
-
-    .MenuFull p {
-        font-size: 10px;
-    }
-    .catMenu {
-        left: 33px;
-        width: 60px;
-        height: 70px;
-    }
-    .flowerMenu {
-        top: 338px;
-        left: 38px;
-        width: 41px;
-        height: 42px;
-    }
-
-    .catJauneMenu {
-        position: absolute;
-        top: 499px;
-        left: 20px;
-        width: 57px;
-        height: 52px;
-    }
-
-  
-    .sunFlower {
-        top: 90px;
-    left: 76%;
-    width: 65px;
-    height: 65px;
-     }
-    
-    .randomMenu {
-        float: right;
-        top: 28%;
-        left: 93%;
-        width: 50px;
-        height: 50px;
-    }
-    .catGrisMenu {
-        top: 37%;
-        left: 69%;
-        width: 67px;
-        height: 67px;
-    }
-    .hibisMenu {
-        top: 546px;
-        left: 79%;
-        width: 35%;
-        height: 18%;
-    }
-
-
-}
-
-
-
-@media screen and (min-width: 1025px ) and (max-width: 1280px) {
-    .MenuFull li {
-         margin: 0;
-        }
-    
-    .MenuFull li a {
-        font-size: 19px;
-        line-height: 16px;
-    }
-
-    .MenuFull ul {
-        height: 52%;
-        margin: 0;
-        padding: 0;
-    }
-
-    .MenuFull p {
-        font-size: 13px;
-    }
 }
