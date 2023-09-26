@@ -30,7 +30,8 @@ main {
     width: 100%;
     visibility:hidden;
     transition: opacity 0.5s ease-in, height 0.5s ease-in;
-    overflow: hidden;
+    position: relative;
+  
 
    
  &.nav_open {
@@ -40,9 +41,12 @@ main {
     display: block; 
     transition: opacity 0.5s ease-in, height 0.5s ease-in;
     width:100%;
-    overflow: hidden;
+      overflow: hidden;
 }
  
+.nav_open{
+    margin-top: 80px;
+}
     
     ul {
         text-align: center;

@@ -261,7 +261,6 @@ h3 {
   position: relative;
   perspective: 1000px;
   transition: transform 0.2s ease;
-  z-index: 2;
 }
 
 #background-video {
@@ -543,7 +542,7 @@ main {
   width: 100%;
   visibility: hidden;
   transition: opacity 0.5s ease-in, height 0.5s ease-in;
-  overflow: hidden;
+  position: relative;
 }
 .MenuFull.nav_open {
   opacity: 1;
@@ -553,6 +552,9 @@ main {
   transition: opacity 0.5s ease-in, height 0.5s ease-in;
   width: 100%;
   overflow: hidden;
+}
+.MenuFull .nav_open {
+  margin-top: 80px;
 }
 .MenuFull ul {
   text-align: center;

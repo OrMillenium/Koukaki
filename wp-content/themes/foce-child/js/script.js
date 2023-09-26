@@ -147,9 +147,9 @@ function moveLogoOnScroll() {
     const scrollY = window.scrollY;
     const logo = document.querySelector('#logo.active');
 
-    const logoSpeed = 1;
-    const maxDownPosition = -100;
-    const logoY = Math.min(scrollY * logoSpeed, maxDownPosition) + 200;
+    const logoSpeed = 3;
+    const maxDownPosition = -300;
+    const logoY = Math.min(scrollY * logoSpeed, maxDownPosition) + 260;
     const parallaxEffect = scrollY * 0.2;
 
     if (scrollY > previousScroll) {
@@ -171,3 +171,5 @@ function moveLogoOnScroll() {
 }
 
 window.addEventListener('scroll', moveLogoOnScroll);
+
+
