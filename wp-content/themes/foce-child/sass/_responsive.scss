@@ -20,7 +20,7 @@
     .toggle_btn {
         width: 28px;
         height: 11px;
-        margin-right: 44px;
+        margin-right: 25px;
         margin-bottom: 14px;
     }
     }
@@ -159,7 +159,7 @@
         
             top: 80px;
             max-width: 20%;
-            left: 23px;
+            left: 4px;
         }
         
     
@@ -167,7 +167,7 @@
     
     
     
-    @media screen and (min-width: 1025px ) and (max-width: 1280px) {
+    @media screen and (min-width: 1024px ) and (max-width: 1280px) {
         .MenuFull li {
              margin: 0;
             }
@@ -192,6 +192,9 @@
     @media screen and (max-width: 600px) {
         .swiper img{
             max-width: 100px;
+        }
+        .MenuFull{
+        top:0;
         }
     }
     
