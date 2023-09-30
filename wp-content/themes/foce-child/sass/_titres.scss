@@ -1,16 +1,5 @@
 
-/* CSS pour l'animation de fade-in */
-.fadeIn {
-    opacity: 0; 
-    transition: opacity 0.5s ease-in; 
-}
-
-/* Lorsque la classe 'visibility' est ajoutée, l'élément devient visible */
-.fadeIn.visibility {
-    opacity: 1;
-}
-
-    //apparition titres
+ /*apparition titres*/
 
 .titleAnimation {
     display: inline-block;
@@ -25,3 +14,8 @@
     }
 }
 
+
+
+ 
+
+  

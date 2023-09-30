@@ -12,16 +12,19 @@
 .parallax {
     transform: translateY(0) translateY(0);
 }
+#logo.active {
+    position: relative; 
+    perspective: 1000px; 
+    transition: transform 0.2s ease;
+	
+}
+
 
 .banner {
-	background-image: url("./assets/images_koukaki/banner.png");
-	background-size: cover;
-	position: relative;
-	overflow: hidden;
+    overflow: hidden;
 	min-height: 806px;
 	margin-top: 80px;
 }
-
 
 #logo {
 	img {
@@ -33,15 +36,6 @@
 		position: relative;
 	}
 }
-#logo.active {
-    position: relative; 
-    perspective: 1000px; 
-    transition: transform 0.2s ease;
-	
-}
-
-
-
 
 #background-video {
 	position: absolute;
@@ -51,4 +45,10 @@
 	object-fit: cover;
 	height: 100%;
 	width:100%;
+}
+
+@media screen and (max-width: 576px) {
+    #background-video {
+      display: none;
+    }
 }

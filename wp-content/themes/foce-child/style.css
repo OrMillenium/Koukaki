@@ -16,61 +16,15 @@
     transform: rotate(360deg);
   }
 }
-.story__article:after {
-  position: absolute;
-  display: block;
-  transform-origin: center center;
-  animation: spin 5s linear infinite;
-}
-
-.story h2:after {
-  position: absolute;
-  display: block;
-  transform-origin: center center;
-  animation: spin 5s linear infinite;
-}
-
-.site-footer:after {
-  position: absolute;
-  display: block;
-  transform-origin: center center;
-  animation: spin 5s linear infinite;
-}
-.site-footer ul:after {
-  position: absolute;
-  display: block;
-  transform-origin: center center;
-  animation: spin 5s linear infinite;
-}
-.site-footer:before {
-  position: absolute;
-  display: block;
-  transform-origin: center center;
-  animation: spin 5s linear infinite;
-}
-
-.nomination:after {
-  position: absolute;
-  display: block;
-  transform-origin: center center;
-  animation: spin 5s linear infinite;
-}
-.nomination:before {
-  position: absolute;
-  display: block;
-  transform-origin: center center;
-  animation: spin 5s linear infinite;
-}
-
-#studio h2:before {
-  position: absolute;
-  display: block;
-  transform-origin: center center;
-  animation: spin 5s linear infinite;
-}
+.story__article:after,
+.story h2:after,
+.site-footer:after,
+.site-footer ul:after,
+.site-footer:before,
+.nomination:after,
+.nomination:before,
+#studio h2:before,
 #studio h2:after {
-  position: absolute;
-  display: block;
   transform-origin: center center;
   animation: spin 5s linear infinite;
 }
@@ -79,7 +33,7 @@
   height: 187.99px !important;
 }
 
-.story :after {
+.story h2:after {
   height: 155px;
 }
 
@@ -108,43 +62,36 @@
 .nomination {
   position: relative;
   display: flex;
-  margin-top: 10%;
-  margin-left: 10%;
-  margin-right: 10%;
+  margin: 10% 10% 0;
   justify-content: center;
 }
-.nomination::before {
+.nomination::before, .nomination::after {
   content: "";
-  background-image: url("./assets/images_koukaki/Sunflower.png");
   background-size: cover;
   background-position: center;
   position: absolute;
-  left: -130px;
-  top: -80px;
   width: 200px;
   height: 200px;
 }
+.nomination::before {
+  background-image: url("./assets/images_koukaki/Sunflower.png");
+  left: -130px;
+  top: -80px;
+}
 .nomination::after {
-  content: "";
   background-image: url("./assets/images_koukaki/orchid.png");
-  background-size: cover;
-  background-position: center;
-  position: absolute;
   right: -212px;
   top: -86px;
-  width: 200px;
-  height: 200px;
 }
 
 .imageNomination {
   display: flex;
   justify-content: space-between;
-  margin: auto;
 }
 
 #oscars {
   position: relative;
-  overflow: hidden;
+  margin-top: 3em;
 }
 
 .titreOscar h3 img {
@@ -152,20 +99,19 @@
   font-size: 22px;
 }
 
-h3 {
-  font-size: 2rem;
+.imageNomination h3 {
   background-image: url("./assets/images_koukaki/orange.png");
+  padding: 2em 1em;
 }
 
-.banner,
-.studio,
-.site-footer,
-.story,
-.nomination {
-  opacity: 0;
-  transform: translateY(0);
+.Oscar {
+  width: 50%;
+  height: 100px;
+  margin-top: 43px;
+  margin-bottom: 10%;
 }
 
+/*Apparition en fade in*/
 .banner {
   animation: fadeSlideDown 3s ease-in-out forwards, fadeIn 3s ease-in-out forwards;
   animation-delay: 0.5s;
@@ -207,17 +153,7 @@ h3 {
     opacity: 1;
   }
 }
-/* CSS pour l'animation de fade-in */
-.fadeIn {
-  opacity: 0;
-  transition: opacity 0.5s ease-in;
-}
-
-/* Lorsque la classe 'visibility' est ajoutée, l'élément devient visible */
-.fadeIn.visibility {
-  opacity: 1;
-}
-
+/*apparition titres*/
 .titleAnimation {
   display: inline-block;
   margin-right: 15px;
@@ -243,10 +179,13 @@ h3 {
   transform: translateY(0) translateY(0);
 }
 
-.banner {
-  background-image: url("./assets/images_koukaki/banner.png");
-  background-size: cover;
+#logo.active {
   position: relative;
+  perspective: 1000px;
+  transition: transform 0.2s ease;
+}
+
+.banner {
   overflow: hidden;
   min-height: 806px;
   margin-top: 80px;
@@ -261,12 +200,6 @@ h3 {
   position: relative;
 }
 
-#logo.active {
-  position: relative;
-  perspective: 1000px;
-  transition: transform 0.2s ease;
-}
-
 #background-video {
   position: absolute;
   top: 0;
@@ -278,6 +211,11 @@ h3 {
   width: 100%;
 }
 
+@media screen and (max-width: 576px) {
+  #background-video {
+    display: none;
+  }
+}
 .story #characters {
   display: flex;
   justify-content: center;
@@ -293,7 +231,7 @@ h3 {
   width: 100%;
 }
 
-h3 {
+.main-characters h3 {
   text-align: left;
   background-position: left;
   padding: 50px 60px;
@@ -328,31 +266,20 @@ h3 {
   }
 }
 .story #place {
-  position: relative;
-  display: flex;
   background-image: url("./assets/images_koukaki/Studio_Koukaki-image_place.png");
-  width: 100%;
-  min-height: 699px;
-  background-size: cover;
-  overflow: hidden;
-}
-
-.story #place > div p {
-  padding-left: 5em;
-  width: 100%;
 }
 
 #littlecloud {
   position: absolute;
   margin-left: 26%;
-  transition: transform 0.2s ease;
+  transition-duration: 2000ms;
 }
 
 #bigcloud {
   margin-top: -32%;
   position: absolute;
-  transition: transform 0.2s ease;
   margin-left: 20%;
+  transition-duration: 2000ms;
 }
 
 #littlecloud, #bigcloud {
@@ -378,25 +305,20 @@ h3 {
   transform: translateY(-50%);
   transition: background-color 0.5s ease-in-out;
 }
-.toggle_btn span::before {
+.toggle_btn span::before, .toggle_btn span::after {
   content: "";
   position: absolute;
   width: 100%;
   height: 1px;
   background-color: black;
   transition: transform 0.5s ease-in-out;
-  transform: translateY(-10px);
 }
 .toggle_btn span::after {
-  content: "";
-  position: absolute;
-  width: 100%;
-  height: 1px;
-  background-color: black;
-  transition: transform 0.5s ease-in-out;
   transform: translateY(10px);
 }
-
+.toggle_btn span::before {
+  transform: translateY(-10px);
+}
 .toggle_btn.active span {
   background-color: transparent;
 }
@@ -407,95 +329,8 @@ h3 {
   transform: translateY(0px) rotateZ(-45deg);
 }
 
-.logoMenu {
-  display: block;
-  width: 200px;
-  margin: auto;
-  padding-top: 8%;
-}
-
-.orchiMenu {
-  position: absolute;
-  top: 70px;
-  height: auto;
-  max-width: 100%;
-  left: -60px;
-}
-
-.catMenu {
-  position: absolute;
-  top: 185px;
-  left: 355px;
-  width: 109px;
-  height: 98px;
-}
-
-.sunFlower {
-  position: absolute;
-  top: 90px;
-  left: 994px;
-  width: 216px;
-  height: 216px;
-  animation: spin 5s linear infinite;
-}
-
-.randomMenu {
-  position: absolute;
-  float: right;
-  top: 356px;
-  left: 1387px;
-  width: 75px;
-  height: 75px;
-  animation: spin 5s linear infinite;
-}
-
-.flowerMenu {
-  position: absolute;
-  top: 403px;
-  left: 212px;
-  width: 70px;
-  height: 70px;
-}
-
-.hibisMenu {
-  position: absolute;
-  top: 597px;
-  left: 1122px;
-  width: 626px;
-  height: 626px;
-}
-
-.catGrisMenu {
-  position: absolute;
-  top: 410px;
-  left: 1042px;
-  width: 109px;
-  height: 95px;
-}
-
-.catJauneMenu {
-  position: absolute;
-  top: 621px;
-  left: 101px;
-  width: 105px;
-  height: 95px;
-}
-
-.orchiMenu,
-.sunFlower,
-.randomMenu,
-.flowerMenu,
-.hibisMenu {
-  position: absolute;
-  display: block;
-  transform-origin: center center;
-  animation: spin 5s linear infinite;
-}
-
+/*img MenuFull*/
 @keyframes spin {
-  from {
-    transform: rotate(0);
-  }
   to {
     transform: rotate(360deg);
   }
@@ -515,6 +350,84 @@ h3 {
 
 .catGrisMenu {
   animation: floatingRight 3s infinite alternate;
+}
+
+.sunFlower,
+.randomMenu {
+  width: 75px;
+  height: 75px;
+  animation: spin 5s linear infinite;
+}
+
+.orchiMenu,
+.catMenu,
+.flowerMenu,
+.catGrisMenu,
+.catJauneMenu,
+.sunFlower,
+.randomMenu,
+.hibisMenu {
+  position: absolute;
+}
+
+.logoMenu {
+  display: block;
+  width: 200px;
+  margin: auto;
+  padding-top: 8%;
+}
+
+.orchiMenu {
+  top: 70px;
+  height: auto;
+  max-width: 100%;
+  left: -60px;
+}
+
+.catMenu {
+  top: 185px;
+  left: 355px;
+  width: 109px;
+  height: 98px;
+}
+
+.flowerMenu {
+  top: 403px;
+  left: 212px;
+  width: 70px;
+  height: 70px;
+}
+
+.catGrisMenu {
+  top: 410px;
+  left: 1042px;
+  width: 109px;
+  height: 95px;
+}
+
+.catJauneMenu {
+  top: 621px;
+  left: 101px;
+  width: 105px;
+  height: 95px;
+}
+
+.sunFlower {
+  top: 90px;
+  left: 994px;
+}
+
+.randomMenu {
+  float: right;
+  top: 356px;
+  left: 1387px;
+}
+
+.hibisMenu {
+  top: 597px;
+  left: 1122px;
+  width: 626px;
+  height: 626px;
 }
 
 .site-title {
@@ -587,39 +500,7 @@ main {
   text-align: center;
 }
 
-/* Vidéo Sur les écrans, quand la largeur de la fenêtre fait au maximum 1280px */
-@media screen and (max-width: 576px) {
-  #background-video {
-    display: none;
-  }
-}
-/* Nuages Sur les écrans, quand la largeur de la fenêtre fait au maximum 576px */
-@media screen and (max-width: 576px) {
-  #bigcloud,
-  #littlecloud {
-    display: none;
-  }
-}
-/* Nuages Sur les écrans, quand la largeur de la fenêtre fait au maximum 767px */
-@media screen and (max-width: 767px) {
-  #bigcloud {
-    margin-top: -47%;
-    position: fixed;
-  }
-  #littlecloud {
-    position: fixed;
-    margin-left: 47%;
-  }
-}
-@media screen and (max-width: 767px) {
-  .story, #place {
-    display: flex;
-    flex-direction: column;
-  }
-  .story, #place, p {
-    margin-top: 3em;
-  }
-}
+/*navigation*/
 @media screen and (max-width: 720px) {
   .main-navigation ul {
     display: flex;
@@ -640,6 +521,7 @@ main {
     margin-bottom: 14px;
   }
 }
+/*Menu*/
 @media screen and (min-width: 601px) and (max-width: 1024px) {
   .toggle_btn {
     margin-right: 40px;
@@ -773,6 +655,7 @@ main {
     font-size: 13px;
   }
 }
+/*carroussel*/
 @media screen and (max-width: 600px) {
   .swiper img {
     max-width: 100px;
@@ -786,13 +669,13 @@ main {
     max-width: 200px;
   }
 }
+/*oscars*/
 @media screen and (max-width: 1192px) {
-  #nomination, .imageNomination {
-    display: flex;
+  .imageNomination {
+    margin-top: 20%;
     flex-direction: column;
   }
   .imageNomination img {
-    max-width: 50%;
     margin-left: 25%;
     margin-top: 5%;
   }
@@ -808,7 +691,7 @@ main {
   }
   .nomination::after {
     right: -15px;
-    top: 254px;
+    top: 375px;
     width: 100px;
     height: 100px;
   }
@@ -819,6 +702,7 @@ main {
     height: 100px;
   }
 }
+/*fleurs*/
 @media (max-width: 768px) {
   .site-footer:after {
     height: auto;
@@ -829,29 +713,27 @@ main {
   .story:after {
     height: auto;
   }
-  .site-footer:after,
-  .site-footer ul:after,
-  .site-footer:before,
   #studio h2:before,
   #studio h2:after {
     height: auto !important;
     display: none !important;
   }
 }
+/*banner*/
 @media screen and (max-width: 720px) {
   .banner {
     margin-top: 50px;
   }
 }
+/*Titres*/
 @media screen and (max-width: 1192px) {
   h2 {
     font-size: 2rem;
   }
-  h3 {
+  main-characters, h3 {
     font-size: 2rem;
-    text-align: center;
-    background-position: center;
-    padding: 50px 60px;
+    text-align: center !important;
+    background-position: center !important;
   }
 }
 @media screen and (max-width: 720px) {
@@ -859,13 +741,34 @@ main {
     padding: 34px 60px;
   }
 }
-@media screen and (max-width: 1192px) {
-  .site-footer {
-    padding-top: 3em;
-  }
-}
+/*studio fleur*/
 @media screen and (max-width: 1192px) {
   #studio h2::before {
     left: -3em;
+  }
+}
+/*section place*/
+@media screen and (max-width: 576px) {
+  #bigcloud,
+  #littlecloud {
+    display: none;
+  }
+}
+@media screen and (max-width: 767px) {
+  #bigcloud {
+    margin-top: -47%;
+    position: fixed;
+  }
+  #littlecloud {
+    position: fixed;
+    margin-left: 47%;
+  }
+}
+@media screen and (max-width: 767px) {
+  .story, #place {
+    flex-direction: column;
+  }
+  .story, #place, p {
+    margin-top: 3em;
   }
 }/*# sourceMappingURL=style.css.map */

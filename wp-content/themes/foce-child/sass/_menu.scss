@@ -18,15 +18,8 @@ $background-color_2: transparent;
 		top: 50%;
 		transform: translateY(-50%);
 		transition: background-color 0.5s ease-in-out;
-		&::before {
-			content: '';
-			position: absolute;
-			width: 100%;
-			height: 1px;
-			background-color: $background-color_1;
-			transition: transform 0.5s ease-in-out;
-			transform: translateY(-10px);
-		}
+
+		&::before,
 		&::after {
 			content: '';
 			position: absolute;
@@ -34,11 +27,17 @@ $background-color_2: transparent;
 			height: 1px;
 			background-color: $background-color_1;
 			transition: transform 0.5s ease-in-out;
+		}
+
+        &::after{
 			transform: translateY(10px);
 		}
+		&::before {
+			transform: translateY(-10px);
+		}
 	}
-}
-.toggle_btn.active {
+
+ &.active {
 	span {
 		background-color: $background-color_2;
 		&::before {
@@ -49,79 +48,115 @@ $background-color_2: transparent;
 		}
 	}
 }
-
-
-
-/////////////////img MenuFull/////////////		
-.logoMenu {
-		display: block;
-		width: 200px;
-		margin: auto;
-		padding-top:8%;
 }
+
+
+
+/*img MenuFull*/
+
+ @keyframes spin {
+	to {
+	  transform: rotate(360deg);
+	}
+  }
+
+  @keyframes floatingRight {
+	0% {
+	  transform: translateX(0);
+	}
+	100% {
+	  transform: translateX(20px); 
+	}
+  }
   
-	
- .orchiMenu {
+  .catJauneMenu,
+  .catMenu {
+	animation: floating 3s infinite alternate; 
+  }
+  
+  .catGrisMenu {
+	animation: floatingRight 3s infinite alternate;
+}
+
+  .sunFlower,
+  .randomMenu {
+	width: 75px;
+	height: 75px;
+	animation: spin 5s linear infinite;
+  }
+  
+
+  .orchiMenu,
+  .catMenu,
+  .flowerMenu,
+  .catGrisMenu,
+  .catJauneMenu,
+  .sunFlower,
+  .randomMenu,
+  .hibisMenu {
 	position: absolute;
+  }
+  
+.logoMenu {
+	display: block;
+	width: 200px;
+	margin: auto;
+	padding-top: 8%;
+  }
+  
+  
+  .orchiMenu {
 	top: 70px;
 	height: auto;
 	max-width: 100%;
 	left: -60px;
-	
-
-}
-.catMenu {
-	position: absolute;
+  }
+  
+  .catMenu {
 	top: 185px;
 	left: 355px;
 	width: 109px;
 	height: 98px;
-}
-.sunFlower {
-	position: absolute;
-	top: 90px;
-	left: 994px;
-	width: 216px;
-	height: 216px;
-	animation: spin 5s linear infinite;
-}
-.randomMenu {
-	position: absolute;
-	float: right;
-	top: 356px;
-	left: 1387px;
-	width: 75px;
-	height: 75px;
-	animation: spin 5s linear infinite;
-}
-.flowerMenu {
-	position: absolute;
+  }
+  
+  .flowerMenu {
 	top: 403px;
 	left: 212px;
 	width: 70px;
 	height: 70px;
-}
-.hibisMenu {
-	position: absolute;
-	top: 597px;
-	left: 1122px;
-	width: 626px;
-	height: 626px;
-}
-.catGrisMenu {
-	position: absolute;
+  }
+  
+  .catGrisMenu {
 	top: 410px;
 	left: 1042px;
 	width: 109px;
-	height:95px;
-	
-}
-.catJauneMenu {
-	position: absolute;
+	height: 95px;
+  }
+  
+  .catJauneMenu {
 	top: 621px;
 	left: 101px;
 	width: 105px;
 	height: 95px;
-}
-
-
+  }
+  
+  
+  .sunFlower {
+	top: 90px;
+	left: 994px;
+  }
+  
+  .randomMenu {
+	float: right;
+	top: 356px;
+	left: 1387px;
+  }
+  
+  .hibisMenu {
+	top: 597px;
+	left: 1122px;
+	width: 626px;
+	height: 626px;
+  }
+  
+ 

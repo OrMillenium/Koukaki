@@ -1,62 +1,57 @@
 .nomination {
     position: relative;
     display: flex;
-    margin-top: 10%;
-    margin-left: 10%;
-    margin-right: 10%;
+    margin: 10% 10% 0;
     justify-content: center;
-    
-    
-    
-    &::before {
+
+    &::before,
+    &::after {
         content: "";
-        background-image: url('./assets/images_koukaki/Sunflower.png');
         background-size: cover;
         background-position: center;
         position: absolute;
+        width: 200px;
+        height: 200px;
+    }
+
+    &::before {
+        background-image: url('./assets/images_koukaki/Sunflower.png');
         left: -130px;
         top: -80px;
-        width: 200px; 
-        height: 200px; 
     }
 
     &::after {
-        content: "";
         background-image: url('./assets/images_koukaki/orchid.png');
-        background-size: cover;
-        background-position: center;
-        position: absolute;
         right: -212px;
         top: -86px;
-        width: 200px; 
-        height: 200px; 
-       // z-index: -1;
-
-    } }
-
-    .imageNomination{
-            display: flex;
-            justify-content: space-between;
-            margin: auto;
-        
     }
-    #oscars{
-        position:relative;
-        overflow: hidden; 
+}
 
-    }
-    
-    .titreOscar h3 img {
-       width:50%;
-        font-size: 22px;  
-    }
-    h3 {
-      
-        font-size: 2rem;
-        background-image: url('./assets/images_koukaki/orange.png');
-       
-    }
+.imageNomination {
+    display: flex;
+    justify-content: space-between;
+}
 
-    
+#oscars {
+    position: relative;
+    margin-top: 3em;
+}
 
-   
+.titreOscar h3 img {
+    width: 50%;
+    font-size: 22px;
+}
+
+.imageNomination h3 {
+
+  background-image: url('./assets/images_koukaki/orange.png');
+  padding: 2em 1em;
+}
+
+.Oscar {
+    width: 50%;
+    height: 100px;
+    margin-top: 43px;
+    margin-bottom: 10%;
+
+}

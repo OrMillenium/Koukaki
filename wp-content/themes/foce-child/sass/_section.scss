@@ -1,18 +1,9 @@
-// sections qui descends et montent..............................
-.banner,
-.studio,
-.site-footer,
-.story,
-.nomination{
-  opacity: 0;
- transform: translateY(0);
-}
+/*Apparition en fade in*/
 
 .banner{
   animation: fadeSlideDown 3s ease-in-out forwards, fadeIn 3s ease-in-out forwards;
   animation-delay: 0.5s;
 }
-
 
 
 .studio,

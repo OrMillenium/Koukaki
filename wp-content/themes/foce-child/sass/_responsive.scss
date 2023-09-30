@@ -1,5 +1,5 @@
 
-//navigation//
+/*navigation*/
 
 @media screen and (max-width: 720px){
     .main-navigation ul {
@@ -25,8 +25,9 @@
     }
     }
 
-//Menu//
-    @media  screen and (min-width: 601px) and (max-width: 1024px) {
+/*Menu*/
+
+@media  screen and (min-width: 601px) and (max-width: 1024px) {
         .toggle_btn {
             margin-right: 40px;
             margin-bottom: 14px;
@@ -42,8 +43,6 @@
             top: 41px;
         } 
         
-    
-    
         .MenuFull li{
             margin: 3%;
         }
@@ -93,7 +92,7 @@
     
     }
     
-    @media screen and (max-width: 600px) {
+@media screen and (max-width: 600px) {
         
         .logoMenu {
             padding-top: 15%;
@@ -167,7 +166,7 @@
     
     
     
-    @media screen and (min-width: 1024px ) and (max-width: 1280px) {
+ @media screen and (min-width: 1024px ) and (max-width: 1280px) {
         .MenuFull li {
              margin: 0;
             }
@@ -188,8 +187,9 @@
         }
     }
 
-//carroussel//
-    @media screen and (max-width: 600px) {
+/*carroussel*/
+
+@media screen and (max-width: 600px) {
         .swiper img{
             max-width: 100px;
         }
@@ -198,28 +198,28 @@
         }
     }
     
-    @media screen and (min-width: 601px) and (max-width: 1024px) {
+ @media screen and (min-width: 601px) and (max-width: 1024px) {
         .swiper img{
             max-width: 200px;
         }
     
     }
 
-    //oscars//
+/*oscars*/
 
-    @media screen and (max-width: 1192px) {
-        #nomination, .imageNomination {
-            display: flex;
+@media screen and (max-width: 1192px) {
+       .imageNomination {
+            margin-top: 20%;
             flex-direction: column;
         }
 
         .imageNomination img{
-        max-width: 50%;
+       
         margin-left: 25%;
         margin-top: 5%;
         }
     }
-    @media screen and (max-width: 720px){
+@media screen and (max-width: 720px){
         #oscars{
             padding-top: 56px;
             padding-bottom: 165px;
@@ -230,7 +230,7 @@
         }
         .nomination::after {
             right: -15px;
-            top: 254px;
+            top: 375px;
             width: 100px;
             height: 100px;
         }
@@ -245,7 +245,7 @@
     }
 
 
-//fleurs//
+/*fleurs*/
 
 @media (max-width: 768px) {
     .site-footer:after {
@@ -260,9 +260,7 @@
         height: auto;
     }
 
-    .site-footer:after,
-    .site-footer ul:after,
-    .site-footer:before,
+  
     #studio h2:before,
     #studio h2:after {
         height: auto !important;
@@ -270,48 +268,75 @@
     }
   }
 
-//banner//
+/*banner*/
+
   @media screen and (max-width: 720px){
   .banner {
-   
-     margin-top: 50px; 
+    margin-top: 50px; 
 }
   }
 
-//Titres//
+/*Titres*/
 
-    @media screen and (max-width: 1192px){
+@media screen and (max-width: 1192px){
         h2{
             font-size: 2rem;
         }
-        h3 {
+        main-characters, h3 {
             font-size: 2rem;
-            text-align: center;
-            background-position: center;
-            padding: 50px 60px;
+            text-align: center!important;
+            background-position: center!important;
+            
             }
         }
         
 
-    @media screen and (max-width: 720px){
-        main-characters,h3{
+@media screen and (max-width: 720px){
+        main-characters, h3{
             padding: 34px 60px;
         }
  }
 
 
+/*studio fleur*/
 
- //footer//
- @media screen and (max-width: 1192px){
-    .site-footer {
-        padding-top: 3em;
-    }
-}
-
-//studio fleur//
 @media screen and (max-width: 1192px){
-#studio h2::before {
-    left: -3em;
-}
-}
+     #studio h2::before {
+         left: -3em;
+        }
+ }
+    
+/*section place*/
+
+@media screen and (max-width: 576px) {
+     #bigcloud,
+     #littlecloud{
+         display:none;
+    }
+  }
+ 
+@media screen and (max-width: 767px) {
+    #bigcloud {
+      margin-top: -47%;
+      position:fixed;
+    }
+  
+    #littlecloud {
+      position:fixed;
+      margin-left: 47%;
+    }
+  }
+  
+    
+@media screen and (max-width: 767px) {
+    
+    .story, #place {
+    
+      flex-direction: column;
+    }
+    .story, #place,  p {
+      margin-top: 3em;
+    
+    }
+  }
     

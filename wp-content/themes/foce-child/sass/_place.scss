@@ -1,32 +1,22 @@
 
 .story #place {
-    position:relative;
-    display: flex;
     background-image: url("./assets/images_koukaki/Studio_Koukaki-image_place.png");
-    width: 100%;
-    min-height:699px;
-    background-size: cover;
-    overflow: hidden; 
+    
 }
-.story #place > div p {
-    padding-left: 5em;
-    width: 100%;
-}
-
 
 #littlecloud{
     position: absolute;
     margin-left: 26%;
-    transition: transform 0.2s ease; 
+    transition-duration: 2000ms;
 }
+   
 #bigcloud{
     margin-top: -32%;
     position: absolute;
-    transition: transform 0.2s ease; 
     margin-left: 20%;
+    transition-duration: 2000ms;
 }
-    
-    
+       
 #littlecloud, #bigcloud {
     filter: blur(10px);
          

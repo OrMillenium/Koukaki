@@ -9,73 +9,16 @@
 }
 
 
-		.story__article {
-			&:after {
-				position: absolute;
-				display: block;
-				transform-origin: center center;
-				animation: spin 5s linear infinite;
-			}
-		}
+.story__article:after,
+.story h2:after,
+.site-footer:after,
+.site-footer ul:after,
+.site-footer:before,
+.nomination:after,
+.nomination:before,
+#studio h2:before,
+#studio h2:after {
 	
-
-.story h2{
-	&:after {
-		position: absolute;
-		display: block;
-		transform-origin: center center;
-		animation: spin 5s linear infinite;
-	}
-}
-.site-footer {
-	&:after {
-		position: absolute;
-		display: block;
-		transform-origin: center center;
-		animation: spin 5s linear infinite;
-	}
-	ul {
-		&:after {
-			position: absolute;
-			display: block;
-			transform-origin: center center;
-			animation: spin 5s linear infinite;
-		}
-	}
-	&:before {
-		position: absolute;
-		display: block;
-		transform-origin: center center;
-		animation: spin 5s linear infinite;
-	}
-}
-.nomination {
-	&:after {
-		position: absolute;
-		display: block;
-		transform-origin: center center;
-		animation: spin 5s linear infinite;
-	}
-	&:before {
-		position: absolute;
-		display: block;
-		transform-origin: center center;
-		animation: spin 5s linear infinite;
-	}
-}
-#studio {
-	h2 {
-		&:before {
-			position: absolute;
-			display: block;
-			transform-origin: center center;
-			animation: spin 5s linear infinite;
-		}
-		&:after {
-			position: absolute;
-			display: block;
-			transform-origin: center center;
-			animation: spin 5s linear infinite;
-		}
-	}
+	transform-origin: center center;
+	animation: spin 5s linear infinite;
 }

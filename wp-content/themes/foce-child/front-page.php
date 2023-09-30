@@ -24,7 +24,8 @@ get_header();
             <article id="" class="story__article">
                 <p><?php echo get_theme_mod('story'); ?></p>
             </article>
-            <?php
+
+         <?php
         $args = array(
             'post_type' => 'characters',
             'posts_per_page' => -1,
@@ -36,9 +37,9 @@ get_header();
         ?>
             
                     <?php get_template_part('template-parts/carroussel'); ?>
-            
-            
 
+
+                    
             <article id="place">
                 <div>
                     <h3>Le Lieu</h3>
