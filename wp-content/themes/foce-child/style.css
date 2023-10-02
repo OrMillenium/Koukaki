@@ -101,7 +101,8 @@
 
 .imageNomination h3 {
   background-image: url("./assets/images_koukaki/orange.png");
-  padding: 2em 1em;
+  font-size: 23px;
+  padding: 1em 6em;
 }
 
 .Oscar {
@@ -475,7 +476,7 @@ main {
 }
 .MenuFull ul {
   text-align: center;
-  height: 65%;
+  height: 57%;
   margin: 0;
   padding: 0;
   list-style: none;
@@ -697,7 +698,7 @@ main {
   }
   .nomination::before {
     left: 29px;
-    top: -82px;
+    top: -54px;
     width: 100px;
     height: 100px;
   }

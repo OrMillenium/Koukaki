@@ -5,22 +5,28 @@ console.log("le JavaScript fonctionne correctement!")
 
 function fadeInAnimation(entry) {
     const title = entry.target.querySelector('h2, h3');
+
     if (title && title.textContent) {
+        entry.target.classList.add('fadeIn');
+
         title.innerHTML = title.textContent
             .split(' ')
             .map(word => `<span class="titleAnimation">${word}</span>`)
             .join('');
 
         const spans = title.querySelectorAll('.titleAnimation');
+
+        const totalWords = spans.length;
         spans.forEach((span, index) => {
-            const delay = index === 0 ? 400 : index * 100;
+            const delay = index === 0 ? 100 : 200 * index; // 
+
             setTimeout(() => span.classList.add('visibility'), delay);
         });
     }
 }
 
 const sectionObserver = new IntersectionObserver((entries, observer) => {
-    entries.forEach(entry => {
+    entries.forEach((entry) => {
         if (entry.isIntersecting) {
             fadeInAnimation(entry);
             observer.unobserve(entry.target);
@@ -28,11 +34,11 @@ const sectionObserver = new IntersectionObserver((entries, observer) => {
     });
 }, { rootMargin: '-100px 0px -100px 0px' });
 
-const sections = document.querySelectorAll('.story, #characters, #place, #studio, footer, #oscars ');
-sections.forEach(section => sectionObserver.observe(section));
-
-
-
+['.story', '#characters', '#place', '#studio', 'footer']
+    .forEach(selector => 
+        document.querySelectorAll(selector)
+            .forEach(section => sectionObserver.observe(section))
+    );
 
 /*CARROUSSEL*/
 
